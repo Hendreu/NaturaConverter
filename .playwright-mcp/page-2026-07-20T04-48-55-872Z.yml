@@ -1,0 +1,1764 @@
+- generic [ref=f19e2]:
+  - banner [ref=f19e3]:
+    - generic [ref=f19e4]:
+      - link "natura convert" [ref=f19e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=f19e9]:
+        - link "Converter" [ref=f19e10] [cursor=pointer]:
+          - /url: /
+        - link "Ferramentas" [ref=f19e11] [cursor=pointer]:
+          - /url: "#ferramentas"
+        - link "Sobre" [ref=f19e12] [cursor=pointer]:
+          - /url: "#sobre"
+      - link "Começar agora" [ref=f19e13] [cursor=pointer]:
+        - /url: /
+  - main [ref=f19e14]:
+    - navigation "Breadcrumb" [ref=f19e159]:
+      - list [ref=f19e160]:
+        - listitem [ref=f19e161]:
+          - link "Início" [ref=f19e162] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f19e165]:
+          - link "Convert" [ref=f19e166] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f19e169]:
+          - link "Editar" [ref=f19e170] [cursor=pointer]:
+            - /url: /edit
+        - listitem [ref=f19e173]:
+          - generic [ref=f19e174]: Formato
+    - generic [ref=f19e175]:
+      - generic [ref=f19e176]:
+        - heading [level=1] [ref=f19e177]:
+          - text: Escolha o
+          - emphasis [ref=f19e178]: formato de saída
+        - paragraph [ref=f19e179]: Selecione o formato desejado e conclua a conversão no navegador.
+      - 'textbox "Pesquisar conversão (ex: pdf, jpg, docx...)" [ref=f19e185]'
+      - generic [ref=f19e186]:
+        - heading "Mais populares" [level=2] [ref=f19e187]
+        - generic [ref=f19e188]:
+          - button "Scalable Vector Graphics SVG" [ref=f19e189] [cursor=pointer]:
+            - generic [ref=f19e190]:
+              - paragraph [ref=f19e191]: Scalable Vector Graphics
+              - generic [ref=f19e192]: SVG
+          - button "Portable Network Graphics PNG Lossless" [ref=f19e193] [cursor=pointer]:
+            - generic [ref=f19e194]:
+              - paragraph [ref=f19e195]: Portable Network Graphics
+              - generic [ref=f19e196]: PNG
+            - generic [ref=f19e197]: Lossless
+          - button "Joint Photographic Experts Group JFIF JPG" [ref=f19e198] [cursor=pointer]:
+            - generic [ref=f19e199]:
+              - paragraph [ref=f19e200]: Joint Photographic Experts Group JFIF
+              - generic [ref=f19e201]: JPG
+          - button "WebP WEBP" [ref=f19e202] [cursor=pointer]:
+            - generic [ref=f19e203]:
+              - paragraph [ref=f19e204]: WebP
+              - generic [ref=f19e205]: WEBP
+          - button "Plain Text TXT" [ref=f19e206] [cursor=pointer]:
+            - generic [ref=f19e207]:
+              - paragraph [ref=f19e208]: Plain Text
+              - generic [ref=f19e209]: TXT
+          - button "Waveform Audio File Format WAV" [ref=f19e210] [cursor=pointer]:
+            - generic [ref=f19e211]:
+              - paragraph [ref=f19e212]: Waveform Audio File Format
+              - generic [ref=f19e213]: WAV
+          - button "Hypertext Markup Language HTML Lossless" [ref=f19e214] [cursor=pointer]:
+            - generic [ref=f19e215]:
+              - paragraph [ref=f19e216]: Hypertext Markup Language
+              - generic [ref=f19e217]: HTML
+            - generic [ref=f19e218]: Lossless
+          - button "MPEG-4 Part 14 MP4" [ref=f19e219] [cursor=pointer]:
+            - generic [ref=f19e220]:
+              - paragraph [ref=f19e221]: MPEG-4 Part 14
+              - generic [ref=f19e222]: MP4
+      - generic [ref=f19e223]:
+        - generic [ref=f19e224]:
+          - heading "Application" [level=2] [ref=f19e225]
+          - generic [ref=f19e226]:
+            - button "Encapsulated PostScript EPS" [ref=f19e227] [cursor=pointer]:
+              - generic [ref=f19e228]:
+                - paragraph [ref=f19e229]: Encapsulated PostScript
+                - generic [ref=f19e230]: EPS
+            - button "PostScript PS" [ref=f19e231] [cursor=pointer]:
+              - generic [ref=f19e232]:
+                - paragraph [ref=f19e233]: PostScript
+                - generic [ref=f19e234]: PS
+            - button "Adobe Illustrator CS2 AI" [ref=f19e235] [cursor=pointer]:
+              - generic [ref=f19e236]:
+                - paragraph [ref=f19e237]: Adobe Illustrator CS2
+                - generic [ref=f19e238]: AI
+            - button "Encapsulated Portable Document Format EPDF" [ref=f19e239] [cursor=pointer]:
+              - generic [ref=f19e240]:
+                - paragraph [ref=f19e241]: Encapsulated Portable Document Format
+                - generic [ref=f19e242]: EPDF
+            - button "Encapsulated PostScript Interchange format EPI" [ref=f19e243] [cursor=pointer]:
+              - generic [ref=f19e244]:
+                - paragraph [ref=f19e245]: Encapsulated PostScript Interchange format
+                - generic [ref=f19e246]: EPI
+            - button "Level II Encapsulated PostScript EPS2" [ref=f19e247] [cursor=pointer]:
+              - generic [ref=f19e248]:
+                - paragraph [ref=f19e249]: Level II Encapsulated PostScript
+                - generic [ref=f19e250]: EPS2
+            - button "Level III Encapsulated PostScript EPS3" [ref=f19e251] [cursor=pointer]:
+              - generic [ref=f19e252]:
+                - paragraph [ref=f19e253]: Level III Encapsulated PostScript
+                - generic [ref=f19e254]: EPS3
+            - button "Encapsulated PostScript EPSF" [ref=f19e255] [cursor=pointer]:
+              - generic [ref=f19e256]:
+                - paragraph [ref=f19e257]: Encapsulated PostScript
+                - generic [ref=f19e258]: EPSF
+            - button "Encapsulated PostScript Interchange format EPSI" [ref=f19e259] [cursor=pointer]:
+              - generic [ref=f19e260]:
+                - paragraph [ref=f19e261]: Encapsulated PostScript Interchange format
+                - generic [ref=f19e262]: EPSI
+            - button "Magick Pixel Cache image format MPC" [ref=f19e263] [cursor=pointer]:
+              - generic [ref=f19e264]:
+                - paragraph [ref=f19e265]: Magick Pixel Cache image format
+                - generic [ref=f19e266]: MPC
+            - button "Magick Scripting Language MSL" [ref=f19e267] [cursor=pointer]:
+              - generic [ref=f19e268]:
+                - paragraph [ref=f19e269]: Magick Scripting Language
+                - generic [ref=f19e270]: MSL
+            - button "Printer Control Language PCL" [ref=f19e271] [cursor=pointer]:
+              - generic [ref=f19e272]:
+                - paragraph [ref=f19e273]: Printer Control Language
+                - generic [ref=f19e274]: PCL
+            - button "Palm Database ImageViewer Format PDB" [ref=f19e275] [cursor=pointer]:
+              - generic [ref=f19e276]:
+                - paragraph [ref=f19e277]: Palm Database ImageViewer Format
+                - generic [ref=f19e278]: PDB
+            - button "Portable Document Archive Format PDFA" [ref=f19e279] [cursor=pointer]:
+              - generic [ref=f19e280]:
+                - paragraph [ref=f19e281]: Portable Document Archive Format
+                - generic [ref=f19e282]: PDFA
+            - button "Portable float format PFM" [ref=f19e283] [cursor=pointer]:
+              - generic [ref=f19e284]:
+                - paragraph [ref=f19e285]: Portable float format
+                - generic [ref=f19e286]: PFM
+            - button "Pocketmod Personal Organizer POCKETMOD" [ref=f19e287] [cursor=pointer]:
+              - generic [ref=f19e288]:
+                - paragraph [ref=f19e289]: Pocketmod Personal Organizer
+                - generic [ref=f19e290]: POCKETMOD
+            - button "Level II PostScript PS2" [ref=f19e291] [cursor=pointer]:
+              - generic [ref=f19e292]:
+                - paragraph [ref=f19e293]: Level II PostScript
+                - generic [ref=f19e294]: PS2
+            - button "Level III PostScript PS3" [ref=f19e295] [cursor=pointer]:
+              - generic [ref=f19e296]:
+                - paragraph [ref=f19e297]: Level III PostScript
+                - generic [ref=f19e298]: PS3
+            - button "Adobe Large Document Format PSB" [ref=f19e299] [cursor=pointer]:
+              - generic [ref=f19e300]:
+                - paragraph [ref=f19e301]: Adobe Large Document Format
+                - generic [ref=f19e302]: PSB
+            - button "Microsoft Visio Template VST" [ref=f19e303] [cursor=pointer]:
+              - generic [ref=f19e304]:
+                - paragraph [ref=f19e305]: Microsoft Visio Template
+                - generic [ref=f19e306]: VST
+        - generic [ref=f19e307]:
+          - heading "Arquivos" [level=2] [ref=f19e308]
+          - generic [ref=f19e309]:
+            - button "ZIP Archive ZIP" [ref=f19e310] [cursor=pointer]:
+              - generic [ref=f19e311]:
+                - paragraph [ref=f19e312]: ZIP Archive
+                - generic [ref=f19e313]: ZIP
+            - button "tar archive TAR" [ref=f19e314] [cursor=pointer]:
+              - generic [ref=f19e315]:
+                - paragraph [ref=f19e316]: tar archive
+                - generic [ref=f19e317]: TAR
+            - button "7z archive 7Z" [ref=f19e318] [cursor=pointer]:
+              - generic [ref=f19e319]:
+                - paragraph [ref=f19e320]: 7z archive
+                - generic [ref=f19e321]: 7Z
+            - button "bzip2 compressed tar archive BZ2" [ref=f19e322] [cursor=pointer]:
+              - generic [ref=f19e323]:
+                - paragraph [ref=f19e324]: bzip2 compressed tar archive
+                - generic [ref=f19e325]: BZ2
+            - button "gzip compressed tar archive GZ" [ref=f19e326] [cursor=pointer]:
+              - generic [ref=f19e327]:
+                - paragraph [ref=f19e328]: gzip compressed tar archive
+                - generic [ref=f19e329]: GZ
+            - button "wim archive WIM" [ref=f19e330] [cursor=pointer]:
+              - generic [ref=f19e331]:
+                - paragraph [ref=f19e332]: wim archive
+                - generic [ref=f19e333]: WIM
+            - button "xz compressed tar archive XZ" [ref=f19e334] [cursor=pointer]:
+              - generic [ref=f19e335]:
+                - paragraph [ref=f19e336]: xz compressed tar archive
+                - generic [ref=f19e337]: XZ
+            - button "LZH/LHA Archive LZH Lossless" [ref=f19e338] [cursor=pointer]:
+              - generic [ref=f19e339]:
+                - paragraph [ref=f19e340]: LZH/LHA Archive
+                - generic [ref=f19e341]: LZH
+              - generic [ref=f19e342]: Lossless
+            - button "Doom WAD Archive WAD Lossless" [ref=f19e343] [cursor=pointer]:
+              - generic [ref=f19e344]:
+                - paragraph [ref=f19e345]: Doom WAD Archive
+                - generic [ref=f19e346]: WAD
+              - generic [ref=f19e347]: Lossless
+            - button "Infinite Craft Save File IC" [ref=f19e348] [cursor=pointer]:
+              - generic [ref=f19e349]:
+                - paragraph [ref=f19e350]: Infinite Craft Save File
+                - generic [ref=f19e351]: IC
+            - button "Comic Book Archive (ZIP) CBZ Lossless" [ref=f19e352] [cursor=pointer]:
+              - generic [ref=f19e353]:
+                - paragraph [ref=f19e354]: Comic Book Archive (ZIP)
+                - generic [ref=f19e355]: CBZ
+              - generic [ref=f19e356]: Lossless
+            - button "Comic Book Archive (TAR) CBT Lossless" [ref=f19e357] [cursor=pointer]:
+              - generic [ref=f19e358]:
+                - paragraph [ref=f19e359]: Comic Book Archive (TAR)
+                - generic [ref=f19e360]: CBT
+              - generic [ref=f19e361]: Lossless
+            - button "Minecraft Bedrock Archive BRARCHIVE Lossless" [ref=f19e362] [cursor=pointer]:
+              - generic [ref=f19e363]:
+                - paragraph [ref=f19e364]: Minecraft Bedrock Archive
+                - generic [ref=f19e365]: BRARCHIVE
+              - generic [ref=f19e366]: Lossless
+            - button "Modrinth Modpack MRPACK Lossless" [ref=f19e367] [cursor=pointer]:
+              - generic [ref=f19e368]:
+                - paragraph [ref=f19e369]: Modrinth Modpack
+                - generic [ref=f19e370]: MRPACK
+              - generic [ref=f19e371]: Lossless
+        - generic [ref=f19e372]:
+          - heading "Áudio" [level=2] [ref=f19e373]
+          - generic [ref=f19e374]:
+            - button "Waveform Audio File Format WAV" [ref=f19e375] [cursor=pointer]:
+              - generic [ref=f19e376]:
+                - paragraph [ref=f19e377]: Waveform Audio File Format
+                - generic [ref=f19e378]: WAV
+            - button "ADTS AAC (Advanced Audio Coding) AAC" [ref=f19e379] [cursor=pointer]:
+              - generic [ref=f19e380]:
+                - paragraph [ref=f19e381]: ADTS AAC (Advanced Audio Coding)
+                - generic [ref=f19e382]: AAC
+            - button "Free Lossless Audio Codec FLAC" [ref=f19e383] [cursor=pointer]:
+              - generic [ref=f19e384]:
+                - paragraph [ref=f19e385]: Free Lossless Audio Codec
+                - generic [ref=f19e386]: FLAC
+            - button "MP3 Audio MP3" [ref=f19e387] [cursor=pointer]:
+              - generic [ref=f19e388]:
+                - paragraph [ref=f19e389]: MP3 Audio
+                - generic [ref=f19e390]: MP3
+            - button "Ogg Audio OGG" [ref=f19e391] [cursor=pointer]:
+              - generic [ref=f19e392]:
+                - paragraph [ref=f19e393]: Ogg Audio
+                - generic [ref=f19e394]: OGG
+            - button "raw AC-3 AC3" [ref=f19e395] [cursor=pointer]:
+              - generic [ref=f19e396]:
+                - paragraph [ref=f19e397]: raw AC-3
+                - generic [ref=f19e398]: AC3
+            - button "Audio IFF AIF" [ref=f19e399] [cursor=pointer]:
+              - generic [ref=f19e400]:
+                - paragraph [ref=f19e401]: Audio IFF
+                - generic [ref=f19e402]: AIF
+            - button "PCM A-law ALAW" [ref=f19e403] [cursor=pointer]:
+              - generic [ref=f19e404]:
+                - paragraph [ref=f19e405]: PCM A-law
+                - generic [ref=f19e406]: ALAW
+            - button "LEGO Racers ALP ALP" [ref=f19e407] [cursor=pointer]:
+              - generic [ref=f19e408]:
+                - paragraph [ref=f19e409]: LEGO Racers ALP
+                - generic [ref=f19e410]: ALP
+            - button "3GPP AMR AMR" [ref=f19e411] [cursor=pointer]:
+              - generic [ref=f19e412]:
+                - paragraph [ref=f19e413]: 3GPP AMR
+                - generic [ref=f19e414]: AMR
+            - button "Ubisoft Rayman 2 APM APM" [ref=f19e415] [cursor=pointer]:
+              - generic [ref=f19e416]:
+                - paragraph [ref=f19e417]: Ubisoft Rayman 2 APM
+                - generic [ref=f19e418]: APM
+            - button "raw aptX (Audio Processing Technology for Bluetooth) APTX" [ref=f19e419] [cursor=pointer]:
+              - generic [ref=f19e420]:
+                - paragraph [ref=f19e421]: raw aptX (Audio Processing Technology for Bluetooth)
+                - generic [ref=f19e422]: APTX
+            - button "raw aptX HD (Audio Processing Technology for Bluetooth) APTX_HD" [ref=f19e423] [cursor=pointer]:
+              - generic [ref=f19e424]:
+                - paragraph [ref=f19e425]: raw aptX HD (Audio Processing Technology for Bluetooth)
+                - generic [ref=f19e426]: APTX_HD
+            - button "Sun AU AU" [ref=f19e427] [cursor=pointer]:
+              - generic [ref=f19e428]:
+                - paragraph [ref=f19e429]: Sun AU
+                - generic [ref=f19e430]: AU
+            - button "G.729 BIT file format BIT" [ref=f19e431] [cursor=pointer]:
+              - generic [ref=f19e432]:
+                - paragraph [ref=f19e433]: G.729 BIT file format
+                - generic [ref=f19e434]: BIT
+            - button "Apple CAF (Core Audio Format) CAF" [ref=f19e435] [cursor=pointer]:
+              - generic [ref=f19e436]:
+                - paragraph [ref=f19e437]: Apple CAF (Core Audio Format)
+                - generic [ref=f19e438]: CAF
+            - button "codec2 .c2 muxer CODEC2" [ref=f19e439] [cursor=pointer]:
+              - generic [ref=f19e440]:
+                - paragraph [ref=f19e441]: codec2 .c2 muxer
+                - generic [ref=f19e442]: CODEC2
+            - button "raw codec2 muxer CODEC2RAW" [ref=f19e443] [cursor=pointer]:
+              - generic [ref=f19e444]:
+                - paragraph [ref=f19e445]: raw codec2 muxer
+                - generic [ref=f19e446]: CODEC2RAW
+            - button "raw DFPWM1a DFPWM" [ref=f19e447] [cursor=pointer]:
+              - generic [ref=f19e448]:
+                - paragraph [ref=f19e449]: raw DFPWM1a
+                - generic [ref=f19e450]: DFPWM
+            - button "raw DTS DTS" [ref=f19e451] [cursor=pointer]:
+              - generic [ref=f19e452]:
+                - paragraph [ref=f19e453]: raw DTS
+                - generic [ref=f19e454]: DTS
+            - button "raw E-AC-3 EAC3" [ref=f19e455] [cursor=pointer]:
+              - generic [ref=f19e456]:
+                - paragraph [ref=f19e457]: raw E-AC-3
+                - generic [ref=f19e458]: EAC3
+            - button "PCM 32-bit floating-point big-endian F32BE" [ref=f19e459] [cursor=pointer]:
+              - generic [ref=f19e460]:
+                - paragraph [ref=f19e461]: PCM 32-bit floating-point big-endian
+                - generic [ref=f19e462]: F32BE
+            - button "PCM 32-bit floating-point little-endian F32LE" [ref=f19e463] [cursor=pointer]:
+              - generic [ref=f19e464]:
+                - paragraph [ref=f19e465]: PCM 32-bit floating-point little-endian
+                - generic [ref=f19e466]: F32LE
+            - button "PCM 64-bit floating-point big-endian F64BE" [ref=f19e467] [cursor=pointer]:
+              - generic [ref=f19e468]:
+                - paragraph [ref=f19e469]: PCM 64-bit floating-point big-endian
+                - generic [ref=f19e470]: F64BE
+            - button "PCM 64-bit floating-point little-endian F64LE" [ref=f19e471] [cursor=pointer]:
+              - generic [ref=f19e472]:
+                - paragraph [ref=f19e473]: PCM 64-bit floating-point little-endian
+                - generic [ref=f19e474]: F64LE
+            - button "raw G.722 G722" [ref=f19e475] [cursor=pointer]:
+              - generic [ref=f19e476]:
+                - paragraph [ref=f19e477]: raw G.722
+                - generic [ref=f19e478]: G722
+            - button "raw G.723.1 TCO" [ref=f19e479] [cursor=pointer]:
+              - generic [ref=f19e480]:
+                - paragraph [ref=f19e481]: raw G.723.1
+                - generic [ref=f19e482]: TCO
+            - button "raw GSM GSM" [ref=f19e483] [cursor=pointer]:
+              - generic [ref=f19e484]:
+                - paragraph [ref=f19e485]: raw GSM
+                - generic [ref=f19e486]: GSM
+            - button "iLBC storage LBC" [ref=f19e487] [cursor=pointer]:
+              - generic [ref=f19e488]:
+                - paragraph [ref=f19e489]: iLBC storage
+                - generic [ref=f19e490]: LBC
+            - button "LOAS/LATM LATM" [ref=f19e491] [cursor=pointer]:
+              - generic [ref=f19e492]:
+                - paragraph [ref=f19e493]: LOAS/LATM
+                - generic [ref=f19e494]: LATM
+            - button "MP2 (MPEG audio layer 2) MP2" [ref=f19e495] [cursor=pointer]:
+              - generic [ref=f19e496]:
+                - paragraph [ref=f19e497]: MP2 (MPEG audio layer 2)
+                - generic [ref=f19e498]: MP2
+            - button "PCM mu-law MULAW" [ref=f19e499] [cursor=pointer]:
+              - generic [ref=f19e500]:
+                - paragraph [ref=f19e501]: PCM mu-law
+                - generic [ref=f19e502]: MULAW
+            - button "Ogg Audio OGA" [ref=f19e503] [cursor=pointer]:
+              - generic [ref=f19e504]:
+                - paragraph [ref=f19e505]: Ogg Audio
+                - generic [ref=f19e506]: OGA
+            - button "Sony OpenMG audio OMA" [ref=f19e507] [cursor=pointer]:
+              - generic [ref=f19e508]:
+                - paragraph [ref=f19e509]: Sony OpenMG audio
+                - generic [ref=f19e510]: OMA
+            - button "Ogg Opus OPUS" [ref=f19e511] [cursor=pointer]:
+              - generic [ref=f19e512]:
+                - paragraph [ref=f19e513]: Ogg Opus
+                - generic [ref=f19e514]: OPUS
+            - button "PCM signed 16-bit big-endian S16BE" [ref=f19e515] [cursor=pointer]:
+              - generic [ref=f19e516]:
+                - paragraph [ref=f19e517]: PCM signed 16-bit big-endian
+                - generic [ref=f19e518]: S16BE
+            - button "PCM signed 16-bit little-endian S16LE" [ref=f19e519] [cursor=pointer]:
+              - generic [ref=f19e520]:
+                - paragraph [ref=f19e521]: PCM signed 16-bit little-endian
+                - generic [ref=f19e522]: S16LE
+            - button "PCM signed 24-bit big-endian S24BE" [ref=f19e523] [cursor=pointer]:
+              - generic [ref=f19e524]:
+                - paragraph [ref=f19e525]: PCM signed 24-bit big-endian
+                - generic [ref=f19e526]: S24BE
+            - button "PCM signed 24-bit little-endian S24LE" [ref=f19e527] [cursor=pointer]:
+              - generic [ref=f19e528]:
+                - paragraph [ref=f19e529]: PCM signed 24-bit little-endian
+                - generic [ref=f19e530]: S24LE
+            - button "PCM signed 32-bit big-endian S32BE" [ref=f19e531] [cursor=pointer]:
+              - generic [ref=f19e532]:
+                - paragraph [ref=f19e533]: PCM signed 32-bit big-endian
+                - generic [ref=f19e534]: S32BE
+            - button "PCM signed 32-bit little-endian S32LE" [ref=f19e535] [cursor=pointer]:
+              - generic [ref=f19e536]:
+                - paragraph [ref=f19e537]: PCM signed 32-bit little-endian
+                - generic [ref=f19e538]: S32LE
+            - button "PCM signed 8-bit S8" [ref=f19e539] [cursor=pointer]:
+              - generic [ref=f19e540]:
+                - paragraph [ref=f19e541]: PCM signed 8-bit
+                - generic [ref=f19e542]: S8
+            - button "raw SBC SBC" [ref=f19e543] [cursor=pointer]:
+              - generic [ref=f19e544]:
+                - paragraph [ref=f19e545]: raw SBC
+                - generic [ref=f19e546]: SBC
+            - button "Ogg Speex SPX" [ref=f19e547] [cursor=pointer]:
+              - generic [ref=f19e548]:
+                - paragraph [ref=f19e549]: Ogg Speex
+                - generic [ref=f19e550]: SPX
+            - button "TTA (True Audio) TTA" [ref=f19e551] [cursor=pointer]:
+              - generic [ref=f19e552]:
+                - paragraph [ref=f19e553]: TTA (True Audio)
+                - generic [ref=f19e554]: TTA
+            - button "PCM unsigned 16-bit big-endian U16BE" [ref=f19e555] [cursor=pointer]:
+              - generic [ref=f19e556]:
+                - paragraph [ref=f19e557]: PCM unsigned 16-bit big-endian
+                - generic [ref=f19e558]: U16BE
+            - button "PCM unsigned 16-bit little-endian U16LE" [ref=f19e559] [cursor=pointer]:
+              - generic [ref=f19e560]:
+                - paragraph [ref=f19e561]: PCM unsigned 16-bit little-endian
+                - generic [ref=f19e562]: U16LE
+            - button "PCM unsigned 24-bit big-endian U24BE" [ref=f19e563] [cursor=pointer]:
+              - generic [ref=f19e564]:
+                - paragraph [ref=f19e565]: PCM unsigned 24-bit big-endian
+                - generic [ref=f19e566]: U24BE
+            - button "PCM unsigned 24-bit little-endian U24LE" [ref=f19e567] [cursor=pointer]:
+              - generic [ref=f19e568]:
+                - paragraph [ref=f19e569]: PCM unsigned 24-bit little-endian
+                - generic [ref=f19e570]: U24LE
+            - button "PCM unsigned 32-bit big-endian U32BE" [ref=f19e571] [cursor=pointer]:
+              - generic [ref=f19e572]:
+                - paragraph [ref=f19e573]: PCM unsigned 32-bit big-endian
+                - generic [ref=f19e574]: U32BE
+            - button "PCM unsigned 32-bit little-endian U32LE" [ref=f19e575] [cursor=pointer]:
+              - generic [ref=f19e576]:
+                - paragraph [ref=f19e577]: PCM unsigned 32-bit little-endian
+                - generic [ref=f19e578]: U32LE
+            - button "PCM unsigned 8-bit U8" [ref=f19e579] [cursor=pointer]:
+              - generic [ref=f19e580]:
+                - paragraph [ref=f19e581]: PCM unsigned 8-bit
+                - generic [ref=f19e582]: U8
+            - button "PCM Archimedes VIDC VIDC" [ref=f19e583] [cursor=pointer]:
+              - generic [ref=f19e584]:
+                - paragraph [ref=f19e585]: PCM Archimedes VIDC
+                - generic [ref=f19e586]: VIDC
+            - button "Creative Voice VOC" [ref=f19e587] [cursor=pointer]:
+              - generic [ref=f19e588]:
+                - paragraph [ref=f19e589]: Creative Voice
+                - generic [ref=f19e590]: VOC
+            - button "raw WavPack WV" [ref=f19e591] [cursor=pointer]:
+              - generic [ref=f19e592]:
+                - paragraph [ref=f19e593]: raw WavPack
+                - generic [ref=f19e594]: WV
+            - button "QuickTime Audio QTA" [ref=f19e595] [cursor=pointer]:
+              - generic [ref=f19e596]:
+                - paragraph [ref=f19e597]: QuickTime Audio
+                - generic [ref=f19e598]: QTA
+            - button "Quite OK Audio QOA" [ref=f19e599] [cursor=pointer]:
+              - generic [ref=f19e600]:
+                - paragraph [ref=f19e601]: Quite OK Audio
+                - generic [ref=f19e602]: QOA
+            - button "Flo Audio FLO" [ref=f19e603] [cursor=pointer]:
+              - generic [ref=f19e604]:
+                - paragraph [ref=f19e605]: Flo Audio
+                - generic [ref=f19e606]: FLO
+            - button "Raw PCM Float32LE PCM Lossless" [ref=f19e607] [cursor=pointer]:
+              - generic [ref=f19e608]:
+                - paragraph [ref=f19e609]: Raw PCM Float32LE
+                - generic [ref=f19e610]: PCM
+              - generic [ref=f19e611]: Lossless
+            - button "MIDI MID Lossless" [ref=f19e612] [cursor=pointer]:
+              - generic [ref=f19e613]:
+                - paragraph [ref=f19e614]: MIDI
+                - generic [ref=f19e615]: MID
+              - generic [ref=f19e616]: Lossless
+        - generic [ref=f19e617]:
+          - heading "Código" [level=2] [ref=f19e618]
+          - generic [ref=f19e619]:
+            - button "Python Script PY" [ref=f19e620] [cursor=pointer]:
+              - generic [ref=f19e621]:
+                - paragraph [ref=f19e622]: Python Script
+                - generic [ref=f19e623]: PY
+            - button "Windows Portable Executable EXE Lossless" [ref=f19e624] [cursor=pointer]:
+              - generic [ref=f19e625]:
+                - paragraph [ref=f19e626]: Windows Portable Executable
+                - generic [ref=f19e627]: EXE
+              - generic [ref=f19e628]: Lossless
+            - button "C Source File C" [ref=f19e629] [cursor=pointer]:
+              - generic [ref=f19e630]:
+                - paragraph [ref=f19e631]: C Source File
+                - generic [ref=f19e632]: C
+            - button "Javascript Source File JS Lossless" [ref=f19e633] [cursor=pointer]:
+              - generic [ref=f19e634]:
+                - paragraph [ref=f19e635]: Javascript Source File
+                - generic [ref=f19e636]: JS
+              - generic [ref=f19e637]: Lossless
+            - button "C++ Source File CPP Lossless" [ref=f19e638] [cursor=pointer]:
+              - generic [ref=f19e639]:
+                - paragraph [ref=f19e640]: C++ Source File
+                - generic [ref=f19e641]: CPP
+              - generic [ref=f19e642]: Lossless
+            - button "Go Source File GO Lossless" [ref=f19e643] [cursor=pointer]:
+              - generic [ref=f19e644]:
+                - paragraph [ref=f19e645]: Go Source File
+                - generic [ref=f19e646]: GO
+              - generic [ref=f19e647]: Lossless
+            - button "C# Source File CS Lossless" [ref=f19e648] [cursor=pointer]:
+              - generic [ref=f19e649]:
+                - paragraph [ref=f19e650]: C# Source File
+                - generic [ref=f19e651]: CS
+              - generic [ref=f19e652]: Lossless
+            - button "Rust Source File RS Lossless" [ref=f19e653] [cursor=pointer]:
+              - generic [ref=f19e654]:
+                - paragraph [ref=f19e655]: Rust Source File
+                - generic [ref=f19e656]: RS
+              - generic [ref=f19e657]: Lossless
+            - button "WebAssembly Binary (Wasm) WASM Lossless" [ref=f19e658] [cursor=pointer]:
+              - generic [ref=f19e659]:
+                - paragraph [ref=f19e660]: WebAssembly Binary (Wasm)
+                - generic [ref=f19e661]: WASM
+              - generic [ref=f19e662]: Lossless
+            - button "WebAssembly Text Format (WAT) WAT Lossless" [ref=f19e663] [cursor=pointer]:
+              - generic [ref=f19e664]:
+                - paragraph [ref=f19e665]: WebAssembly Text Format (WAT)
+                - generic [ref=f19e666]: WAT
+              - generic [ref=f19e667]: Lossless
+            - button "x86-64 Linux Executable and Linkable Format ELF" [ref=f19e668] [cursor=pointer]:
+              - generic [ref=f19e669]:
+                - paragraph [ref=f19e670]: x86-64 Linux Executable and Linkable Format
+                - generic [ref=f19e671]: ELF
+            - button "CSS Stylesheet CSS Lossless" [ref=f19e672] [cursor=pointer]:
+              - generic [ref=f19e673]:
+                - paragraph [ref=f19e674]: CSS Stylesheet
+                - generic [ref=f19e675]: CSS
+              - generic [ref=f19e676]: Lossless
+        - generic [ref=f19e677]:
+          - heading "Dados" [level=2] [ref=f19e678]
+          - generic [ref=f19e679]:
+            - button "JavaScript Object Notation JSON" [ref=f19e680] [cursor=pointer]:
+              - generic [ref=f19e681]:
+                - paragraph [ref=f19e682]: JavaScript Object Notation
+                - generic [ref=f19e683]: JSON
+            - button "Comma Separated Values CSV" [ref=f19e684] [cursor=pointer]:
+              - generic [ref=f19e685]:
+                - paragraph [ref=f19e686]: Comma Separated Values
+                - generic [ref=f19e687]: CSV
+            - button "YAML Ain't Markup Language YML" [ref=f19e688] [cursor=pointer]:
+              - generic [ref=f19e689]:
+                - paragraph [ref=f19e690]: YAML Ain't Markup Language
+                - generic [ref=f19e691]: YML
+            - button "Tom's Obvious, Minimal Language TOML" [ref=f19e692] [cursor=pointer]:
+              - generic [ref=f19e693]:
+                - paragraph [ref=f19e694]: Tom's Obvious, Minimal Language
+                - generic [ref=f19e695]: TOML
+            - button "Initialization file INI" [ref=f19e696] [cursor=pointer]:
+              - generic [ref=f19e697]:
+                - paragraph [ref=f19e698]: Initialization file
+                - generic [ref=f19e699]: INI
+            - button "Extensible Markup Language XML" [ref=f19e700] [cursor=pointer]:
+              - generic [ref=f19e701]:
+                - paragraph [ref=f19e702]: Extensible Markup Language
+                - generic [ref=f19e703]: XML
+            - button "Minecraft Map File DAT" [ref=f19e704] [cursor=pointer]:
+              - generic [ref=f19e705]:
+                - paragraph [ref=f19e706]: Minecraft Map File
+                - generic [ref=f19e707]: DAT
+            - button "Minecraft Map File (Grid) DAT" [ref=f19e708] [cursor=pointer]:
+              - generic [ref=f19e709]:
+                - paragraph [ref=f19e710]: Minecraft Map File (Grid)
+                - generic [ref=f19e711]: DAT
+            - button "JSON5 JSON5" [ref=f19e712] [cursor=pointer]:
+              - generic [ref=f19e713]:
+                - paragraph [ref=f19e714]: JSON5
+                - generic [ref=f19e715]: JSON5
+            - button "JSON Comments JSONC" [ref=f19e716] [cursor=pointer]:
+              - generic [ref=f19e717]:
+                - paragraph [ref=f19e718]: JSON Comments
+                - generic [ref=f19e719]: JSONC
+            - button "Named Binary Tag NBT Lossless" [ref=f19e720] [cursor=pointer]:
+              - generic [ref=f19e721]:
+                - paragraph [ref=f19e722]: Named Binary Tag
+                - generic [ref=f19e723]: NBT
+              - generic [ref=f19e724]: Lossless
+            - button "String Named Binary Tag SNBT Lossless" [ref=f19e725] [cursor=pointer]:
+              - generic [ref=f19e726]:
+                - paragraph [ref=f19e727]: String Named Binary Tag
+                - generic [ref=f19e728]: SNBT
+              - generic [ref=f19e729]: Lossless
+            - button "Minecraft Schematic SCHEMATIC Lossless" [ref=f19e730] [cursor=pointer]:
+              - generic [ref=f19e731]:
+                - paragraph [ref=f19e732]: Minecraft Schematic
+                - generic [ref=f19e733]: SCHEMATIC
+              - generic [ref=f19e734]: Lossless
+            - button "Sponge Schematic SCHEM Lossless" [ref=f19e735] [cursor=pointer]:
+              - generic [ref=f19e736]:
+                - paragraph [ref=f19e737]: Sponge Schematic
+                - generic [ref=f19e738]: SCHEM
+              - generic [ref=f19e739]: Lossless
+            - button "Litematica Schematic LITEMATIC Lossless" [ref=f19e740] [cursor=pointer]:
+              - generic [ref=f19e741]:
+                - paragraph [ref=f19e742]: Litematica Schematic
+                - generic [ref=f19e743]: LITEMATIC
+              - generic [ref=f19e744]: Lossless
+            - button "Binary JSON BSON Lossless" [ref=f19e745] [cursor=pointer]:
+              - generic [ref=f19e746]:
+                - paragraph [ref=f19e747]: Binary JSON
+                - generic [ref=f19e748]: BSON
+              - generic [ref=f19e749]: Lossless
+            - button "Nintendo 64 ROM (Big Endian) Z64 Lossless" [ref=f19e750] [cursor=pointer]:
+              - generic [ref=f19e751]:
+                - paragraph [ref=f19e752]: Nintendo 64 ROM (Big Endian)
+                - generic [ref=f19e753]: Z64
+              - generic [ref=f19e754]: Lossless
+            - button "Nintendo 64 ROM (Little Endian) N64 Lossless" [ref=f19e755] [cursor=pointer]:
+              - generic [ref=f19e756]:
+                - paragraph [ref=f19e757]: Nintendo 64 ROM (Little Endian)
+                - generic [ref=f19e758]: N64
+              - generic [ref=f19e759]: Lossless
+            - button "Nintendo 64 ROM (Byte-swapped) V64 Lossless" [ref=f19e760] [cursor=pointer]:
+              - generic [ref=f19e761]:
+                - paragraph [ref=f19e762]: Nintendo 64 ROM (Byte-swapped)
+                - generic [ref=f19e763]: V64
+              - generic [ref=f19e764]: Lossless
+            - button "Token-Oriented Object Notation TOON Lossless" [ref=f19e765] [cursor=pointer]:
+              - generic [ref=f19e766]:
+                - paragraph [ref=f19e767]: Token-Oriented Object Notation
+                - generic [ref=f19e768]: TOON
+              - generic [ref=f19e769]: Lossless
+            - button "Editable Celaria Map ECMAP" [ref=f19e770] [cursor=pointer]:
+              - generic [ref=f19e771]:
+                - paragraph [ref=f19e772]: Editable Celaria Map
+                - generic [ref=f19e773]: ECMAP
+            - button "ULTRAKILL CyberGrind Pattern CGP" [ref=f19e774] [cursor=pointer]:
+              - generic [ref=f19e775]:
+                - paragraph [ref=f19e776]: ULTRAKILL CyberGrind Pattern
+                - generic [ref=f19e777]: CGP
+        - generic [ref=f19e778]:
+          - heading "Bancos de dados" [level=2] [ref=f19e779]
+          - button "SQLite3 DB" [ref=f19e781] [cursor=pointer]:
+            - generic [ref=f19e782]:
+              - paragraph [ref=f19e783]: SQLite3
+              - generic [ref=f19e784]: DB
+        - generic [ref=f19e785]:
+          - heading "Documentos" [level=2] [ref=f19e786]
+          - generic [ref=f19e787]:
+            - button "Hypertext Markup Language HTML Lossless" [ref=f19e788] [cursor=pointer]:
+              - generic [ref=f19e789]:
+                - paragraph [ref=f19e790]: Hypertext Markup Language
+                - generic [ref=f19e791]: HTML
+              - generic [ref=f19e792]: Lossless
+            - button "CommonMark Markdown MD Lossless" [ref=f19e793] [cursor=pointer]:
+              - generic [ref=f19e794]:
+                - paragraph [ref=f19e795]: CommonMark Markdown
+                - generic [ref=f19e796]: MD
+              - generic [ref=f19e797]: Lossless
+            - button "CommonMark with extensions MD Lossless" [ref=f19e798] [cursor=pointer]:
+              - generic [ref=f19e799]:
+                - paragraph [ref=f19e800]: CommonMark with extensions
+                - generic [ref=f19e801]: MD
+              - generic [ref=f19e802]: Lossless
+            - button "WordprocessingML Document DOCX" [ref=f19e803] [cursor=pointer]:
+              - generic [ref=f19e804]:
+                - paragraph [ref=f19e805]: WordprocessingML Document
+                - generic [ref=f19e806]: DOCX
+            - button "EPUB v3 EPUB Lossless" [ref=f19e807] [cursor=pointer]:
+              - generic [ref=f19e808]:
+                - paragraph [ref=f19e809]: EPUB v3
+                - generic [ref=f19e810]: EPUB
+              - generic [ref=f19e811]: Lossless
+            - button "GitHub-Flavored Markdown MD Lossless" [ref=f19e812] [cursor=pointer]:
+              - generic [ref=f19e813]:
+                - paragraph [ref=f19e814]: GitHub-Flavored Markdown
+                - generic [ref=f19e815]: MD
+              - generic [ref=f19e816]: Lossless
+            - button "LaTeX TEX Lossless" [ref=f19e817] [cursor=pointer]:
+              - generic [ref=f19e818]:
+                - paragraph [ref=f19e819]: LaTeX
+                - generic [ref=f19e820]: TEX
+              - generic [ref=f19e821]: Lossless
+            - button "Pandoc's Markdown MD Lossless" [ref=f19e822] [cursor=pointer]:
+              - generic [ref=f19e823]:
+                - paragraph [ref=f19e824]: Pandoc's Markdown
+                - generic [ref=f19e825]: MD
+              - generic [ref=f19e826]: Lossless
+            - button "GitHub-Flavored Markdown MD Lossless" [ref=f19e827] [cursor=pointer]:
+              - generic [ref=f19e828]:
+                - paragraph [ref=f19e829]: GitHub-Flavored Markdown
+                - generic [ref=f19e830]: MD
+              - generic [ref=f19e831]: Lossless
+            - button "MultiMarkdown MD Lossless" [ref=f19e832] [cursor=pointer]:
+              - generic [ref=f19e833]:
+                - paragraph [ref=f19e834]: MultiMarkdown
+                - generic [ref=f19e835]: MD
+              - generic [ref=f19e836]: Lossless
+            - button "PHP Markdown Extra MD Lossless" [ref=f19e837] [cursor=pointer]:
+              - generic [ref=f19e838]:
+                - paragraph [ref=f19e839]: PHP Markdown Extra
+                - generic [ref=f19e840]: MD
+              - generic [ref=f19e841]: Lossless
+            - button "original unextended Markdown MD Lossless" [ref=f19e842] [cursor=pointer]:
+              - generic [ref=f19e843]:
+                - paragraph [ref=f19e844]: original unextended Markdown
+                - generic [ref=f19e845]: MD
+              - generic [ref=f19e846]: Lossless
+            - button "LaTeX Beamer slides TEX Lossless" [ref=f19e847] [cursor=pointer]:
+              - generic [ref=f19e848]:
+                - paragraph [ref=f19e849]: LaTeX Beamer slides
+                - generic [ref=f19e850]: TEX
+              - generic [ref=f19e851]: Lossless
+            - button "zip of linked HTML files ZIP Lossless" [ref=f19e852] [cursor=pointer]:
+              - generic [ref=f19e853]:
+                - paragraph [ref=f19e854]: zip of linked HTML files
+                - generic [ref=f19e855]: ZIP
+              - generic [ref=f19e856]: Lossless
+            - button "DZSlides HTML slides HTML Lossless" [ref=f19e857] [cursor=pointer]:
+              - generic [ref=f19e858]:
+                - paragraph [ref=f19e859]: DZSlides HTML slides
+                - generic [ref=f19e860]: HTML
+              - generic [ref=f19e861]: Lossless
+            - button "EPUB v2 EPUB Lossless" [ref=f19e862] [cursor=pointer]:
+              - generic [ref=f19e863]:
+                - paragraph [ref=f19e864]: EPUB v2
+                - generic [ref=f19e865]: EPUB
+              - generic [ref=f19e866]: Lossless
+            - button "EPUB v3 EPUB Lossless" [ref=f19e867] [cursor=pointer]:
+              - generic [ref=f19e868]:
+                - paragraph [ref=f19e869]: EPUB v3
+                - generic [ref=f19e870]: EPUB
+              - generic [ref=f19e871]: Lossless
+            - button "XHTML 1.0 Transitional HTML Lossless" [ref=f19e872] [cursor=pointer]:
+              - generic [ref=f19e873]:
+                - paragraph [ref=f19e874]: XHTML 1.0 Transitional
+                - generic [ref=f19e875]: HTML
+              - generic [ref=f19e876]: Lossless
+            - button "S5 HTML slides HTML Lossless" [ref=f19e877] [cursor=pointer]:
+              - generic [ref=f19e878]:
+                - paragraph [ref=f19e879]: S5 HTML slides
+                - generic [ref=f19e880]: HTML
+              - generic [ref=f19e881]: Lossless
+            - button "Slideous HTML slides HTML Lossless" [ref=f19e882] [cursor=pointer]:
+              - generic [ref=f19e883]:
+                - paragraph [ref=f19e884]: Slideous HTML slides
+                - generic [ref=f19e885]: HTML
+              - generic [ref=f19e886]: Lossless
+            - button "Slidy HTML slides HTML Lossless" [ref=f19e887] [cursor=pointer]:
+              - generic [ref=f19e888]:
+                - paragraph [ref=f19e889]: Slidy HTML slides
+                - generic [ref=f19e890]: HTML
+              - generic [ref=f19e891]: Lossless
+            - button "CSL JSON bibliography JSON Lossless" [ref=f19e892] [cursor=pointer]:
+              - generic [ref=f19e893]:
+                - paragraph [ref=f19e894]: CSL JSON bibliography
+                - generic [ref=f19e895]: JSON
+              - generic [ref=f19e896]: Lossless
+            - button "DocBook v4 XML Lossless" [ref=f19e897] [cursor=pointer]:
+              - generic [ref=f19e898]:
+                - paragraph [ref=f19e899]: DocBook v4
+                - generic [ref=f19e900]: XML
+              - generic [ref=f19e901]: Lossless
+            - button "JATS XML XML Lossless" [ref=f19e902] [cursor=pointer]:
+              - generic [ref=f19e903]:
+                - paragraph [ref=f19e904]: JATS XML
+                - generic [ref=f19e905]: XML
+              - generic [ref=f19e906]: Lossless
+            - button "docbook4 XML Lossless" [ref=f19e907] [cursor=pointer]:
+              - generic [ref=f19e908]:
+                - paragraph [ref=f19e909]: docbook4
+                - generic [ref=f19e910]: XML
+              - generic [ref=f19e911]: Lossless
+            - button "DocBook v5 XML Lossless" [ref=f19e912] [cursor=pointer]:
+              - generic [ref=f19e913]:
+                - paragraph [ref=f19e914]: DocBook v5
+                - generic [ref=f19e915]: XML
+              - generic [ref=f19e916]: Lossless
+            - button "OpenDocument XML XML Lossless" [ref=f19e917] [cursor=pointer]:
+              - generic [ref=f19e918]:
+                - paragraph [ref=f19e919]: OpenDocument XML
+                - generic [ref=f19e920]: XML
+              - generic [ref=f19e921]: Lossless
+            - button "TEI Simple XML Lossless" [ref=f19e922] [cursor=pointer]:
+              - generic [ref=f19e923]:
+                - paragraph [ref=f19e924]: TEI Simple
+                - generic [ref=f19e925]: XML
+              - generic [ref=f19e926]: Lossless
+            - button "modern AsciiDoc ADOC Lossless" [ref=f19e927] [cursor=pointer]:
+              - generic [ref=f19e928]:
+                - paragraph [ref=f19e929]: modern AsciiDoc
+                - generic [ref=f19e930]: ADOC
+              - generic [ref=f19e931]: Lossless
+            - button "BibLaTeX bibliography BIB Lossless" [ref=f19e932] [cursor=pointer]:
+              - generic [ref=f19e933]:
+                - paragraph [ref=f19e934]: BibLaTeX bibliography
+                - generic [ref=f19e935]: BIB
+              - generic [ref=f19e936]: Lossless
+            - button "BibTeX bibliography BIB Lossless" [ref=f19e937] [cursor=pointer]:
+              - generic [ref=f19e938]:
+                - paragraph [ref=f19e939]: BibTeX bibliography
+                - generic [ref=f19e940]: BIB
+              - generic [ref=f19e941]: Lossless
+            - button "Djot markup DJ Lossless" [ref=f19e942] [cursor=pointer]:
+              - generic [ref=f19e943]:
+                - paragraph [ref=f19e944]: Djot markup
+                - generic [ref=f19e945]: DJ
+              - generic [ref=f19e946]: Lossless
+            - button "DokuWiki markup DOKUWIKI Lossless" [ref=f19e947] [cursor=pointer]:
+              - generic [ref=f19e948]:
+                - paragraph [ref=f19e949]: DokuWiki markup
+                - generic [ref=f19e950]: DOKUWIKI
+              - generic [ref=f19e951]: Lossless
+            - button "FictionBook2 FB2 Lossless" [ref=f19e952] [cursor=pointer]:
+              - generic [ref=f19e953]:
+                - paragraph [ref=f19e954]: FictionBook2
+                - generic [ref=f19e955]: FB2
+              - generic [ref=f19e956]: Lossless
+            - button "Haddock markup HADDOCK Lossless" [ref=f19e957] [cursor=pointer]:
+              - generic [ref=f19e958]:
+                - paragraph [ref=f19e959]: Haddock markup
+                - generic [ref=f19e960]: HADDOCK
+              - generic [ref=f19e961]: Lossless
+            - button "Jupyter notebook IPYNB Lossless" [ref=f19e962] [cursor=pointer]:
+              - generic [ref=f19e963]:
+                - paragraph [ref=f19e964]: Jupyter notebook
+                - generic [ref=f19e965]: IPYNB
+              - generic [ref=f19e966]: Lossless
+            - button "Jira/Confluence wiki markup JIRA Lossless" [ref=f19e967] [cursor=pointer]:
+              - generic [ref=f19e968]:
+                - paragraph [ref=f19e969]: Jira/Confluence wiki markup
+                - generic [ref=f19e970]: JIRA
+              - generic [ref=f19e971]: Lossless
+            - button "roff man 1 Lossless" [ref=f19e972] [cursor=pointer]:
+              - generic [ref=f19e973]:
+                - paragraph [ref=f19e974]: roff man
+                - generic [ref=f19e975]: "1"
+              - generic [ref=f19e976]: Lossless
+            - button "MediaWiki markup WIKI Lossless" [ref=f19e977] [cursor=pointer]:
+              - generic [ref=f19e978]:
+                - paragraph [ref=f19e979]: MediaWiki markup
+                - generic [ref=f19e980]: WIKI
+              - generic [ref=f19e981]: Lossless
+            - button "Muse MUSE Lossless" [ref=f19e982] [cursor=pointer]:
+              - generic [ref=f19e983]:
+                - paragraph [ref=f19e984]: Muse
+                - generic [ref=f19e985]: MUSE
+              - generic [ref=f19e986]: Lossless
+            - button "native Haskell NATIVE Lossless" [ref=f19e987] [cursor=pointer]:
+              - generic [ref=f19e988]:
+                - paragraph [ref=f19e989]: native Haskell
+                - generic [ref=f19e990]: NATIVE
+              - generic [ref=f19e991]: Lossless
+            - button "OPML OPML Lossless" [ref=f19e992] [cursor=pointer]:
+              - generic [ref=f19e993]:
+                - paragraph [ref=f19e994]: OPML
+                - generic [ref=f19e995]: OPML
+              - generic [ref=f19e996]: Lossless
+            - button "Emacs Org mode ORG Lossless" [ref=f19e997] [cursor=pointer]:
+              - generic [ref=f19e998]:
+                - paragraph [ref=f19e999]: Emacs Org mode
+                - generic [ref=f19e1000]: ORG
+              - generic [ref=f19e1001]: Lossless
+            - button "Typst TYP Lossless" [ref=f19e1002] [cursor=pointer]:
+              - generic [ref=f19e1003]:
+                - paragraph [ref=f19e1004]: Typst
+                - generic [ref=f19e1005]: TYP
+              - generic [ref=f19e1006]: Lossless
+            - button "ANSI terminal ANSI Lossless" [ref=f19e1007] [cursor=pointer]:
+              - generic [ref=f19e1008]:
+                - paragraph [ref=f19e1009]: ANSI terminal
+                - generic [ref=f19e1010]: ANSI
+              - generic [ref=f19e1011]: Lossless
+            - button "AsciiDoc for asciidoc-py ADOC Lossless" [ref=f19e1012] [cursor=pointer]:
+              - generic [ref=f19e1013]:
+                - paragraph [ref=f19e1014]: AsciiDoc for asciidoc-py
+                - generic [ref=f19e1015]: ADOC
+              - generic [ref=f19e1016]: Lossless
+            - button "AsciiDoctor (= modern AsciiDoc) ADOC Lossless" [ref=f19e1017] [cursor=pointer]:
+              - generic [ref=f19e1018]:
+                - paragraph [ref=f19e1019]: AsciiDoctor (= modern AsciiDoc)
+                - generic [ref=f19e1020]: ADOC
+              - generic [ref=f19e1021]: Lossless
+            - button "BBCode BBCODE Lossless" [ref=f19e1022] [cursor=pointer]:
+              - generic [ref=f19e1023]:
+                - paragraph [ref=f19e1024]: BBCode
+                - generic [ref=f19e1025]: BBCODE
+              - generic [ref=f19e1026]: Lossless
+            - button "bbcode_fluxbb BBCODE_FLUXBB Lossless" [ref=f19e1027] [cursor=pointer]:
+              - generic [ref=f19e1028]:
+                - paragraph [ref=f19e1029]: bbcode_fluxbb
+                - generic [ref=f19e1030]: BBCODE_FLUXBB
+              - generic [ref=f19e1031]: Lossless
+            - button "bbcode_hubzilla BBCODE_HUBZILLA Lossless" [ref=f19e1032] [cursor=pointer]:
+              - generic [ref=f19e1033]:
+                - paragraph [ref=f19e1034]: bbcode_hubzilla
+                - generic [ref=f19e1035]: BBCODE_HUBZILLA
+              - generic [ref=f19e1036]: Lossless
+            - button "bbcode_phpbb BBCODE_PHPBB Lossless" [ref=f19e1037] [cursor=pointer]:
+              - generic [ref=f19e1038]:
+                - paragraph [ref=f19e1039]: bbcode_phpbb
+                - generic [ref=f19e1040]: BBCODE_PHPBB
+              - generic [ref=f19e1041]: Lossless
+            - button "bbcode_steam BBCODE_STEAM Lossless" [ref=f19e1042] [cursor=pointer]:
+              - generic [ref=f19e1043]:
+                - paragraph [ref=f19e1044]: bbcode_steam
+                - generic [ref=f19e1045]: BBCODE_STEAM
+              - generic [ref=f19e1046]: Lossless
+            - button "bbcode_xenforo BBCODE_XENFORO Lossless" [ref=f19e1047] [cursor=pointer]:
+              - generic [ref=f19e1048]:
+                - paragraph [ref=f19e1049]: bbcode_xenforo
+                - generic [ref=f19e1050]: BBCODE_XENFORO
+              - generic [ref=f19e1051]: Lossless
+            - button "InDesign ICML ICML Lossless" [ref=f19e1052] [cursor=pointer]:
+              - generic [ref=f19e1053]:
+                - paragraph [ref=f19e1054]: InDesign ICML
+                - generic [ref=f19e1055]: ICML
+              - generic [ref=f19e1056]: Lossless
+            - button "jats_archiving JATS_ARCHIVING Lossless" [ref=f19e1057] [cursor=pointer]:
+              - generic [ref=f19e1058]:
+                - paragraph [ref=f19e1059]: jats_archiving
+                - generic [ref=f19e1060]: JATS_ARCHIVING
+              - generic [ref=f19e1061]: Lossless
+            - button "jats_articleauthoring JATS_ARTICLEAUTHORING Lossless" [ref=f19e1062] [cursor=pointer]:
+              - generic [ref=f19e1063]:
+                - paragraph [ref=f19e1064]: jats_articleauthoring
+                - generic [ref=f19e1065]: JATS_ARTICLEAUTHORING
+              - generic [ref=f19e1066]: Lossless
+            - button "jats_publishing JATS_PUBLISHING Lossless" [ref=f19e1067] [cursor=pointer]:
+              - generic [ref=f19e1068]:
+                - paragraph [ref=f19e1069]: jats_publishing
+                - generic [ref=f19e1070]: JATS_PUBLISHING
+              - generic [ref=f19e1071]: Lossless
+            - button "Markua MARKUA Lossless" [ref=f19e1072] [cursor=pointer]:
+              - generic [ref=f19e1073]:
+                - paragraph [ref=f19e1074]: Markua
+                - generic [ref=f19e1075]: MARKUA
+              - generic [ref=f19e1076]: Lossless
+            - button "roff ms MS Lossless" [ref=f19e1077] [cursor=pointer]:
+              - generic [ref=f19e1078]:
+                - paragraph [ref=f19e1079]: roff ms
+                - generic [ref=f19e1080]: MS
+              - generic [ref=f19e1081]: Lossless
+            - button "GNU Texinfo TEXI Lossless" [ref=f19e1082] [cursor=pointer]:
+              - generic [ref=f19e1083]:
+                - paragraph [ref=f19e1084]: GNU Texinfo
+                - generic [ref=f19e1085]: TEXI
+              - generic [ref=f19e1086]: Lossless
+            - button "XWiki markup XWIKI Lossless" [ref=f19e1087] [cursor=pointer]:
+              - generic [ref=f19e1088]:
+                - paragraph [ref=f19e1089]: XWiki markup
+                - generic [ref=f19e1090]: XWIKI
+              - generic [ref=f19e1091]: Lossless
+            - button "ZimWiki markup ZIMWIKI Lossless" [ref=f19e1092] [cursor=pointer]:
+              - generic [ref=f19e1093]:
+                - paragraph [ref=f19e1094]: ZimWiki markup
+                - generic [ref=f19e1095]: ZIMWIKI
+              - generic [ref=f19e1096]: Lossless
+            - button "Mathematical Markup Language MML Lossless" [ref=f19e1097] [cursor=pointer]:
+              - generic [ref=f19e1098]:
+                - paragraph [ref=f19e1099]: Mathematical Markup Language
+                - generic [ref=f19e1100]: MML
+              - generic [ref=f19e1101]: Lossless
+        - generic [ref=f19e1102]:
+          - heading "Fontes" [level=2] [ref=f19e1103]
+          - generic [ref=f19e1104]:
+            - button "OpenType Font OTF Lossless" [ref=f19e1105] [cursor=pointer]:
+              - generic [ref=f19e1106]:
+                - paragraph [ref=f19e1107]: OpenType Font
+                - generic [ref=f19e1108]: OTF
+              - generic [ref=f19e1109]: Lossless
+            - button "Web Open Font Format 2.0 WOFF2 Lossless" [ref=f19e1110] [cursor=pointer]:
+              - generic [ref=f19e1111]:
+                - paragraph [ref=f19e1112]: Web Open Font Format 2.0
+                - generic [ref=f19e1113]: WOFF2
+              - generic [ref=f19e1114]: Lossless
+        - generic [ref=f19e1115]:
+          - heading "Imagens" [level=2] [ref=f19e1116]
+          - generic [ref=f19e1117]:
+            - button "Scalable Vector Graphics SVG" [ref=f19e1118] [cursor=pointer]:
+              - generic [ref=f19e1119]:
+                - paragraph [ref=f19e1120]: Scalable Vector Graphics
+                - generic [ref=f19e1121]: SVG
+            - button "Portable Network Graphics PNG Lossless" [ref=f19e1122] [cursor=pointer]:
+              - generic [ref=f19e1123]:
+                - paragraph [ref=f19e1124]: Portable Network Graphics
+                - generic [ref=f19e1125]: PNG
+              - generic [ref=f19e1126]: Lossless
+            - button "Joint Photographic Experts Group JFIF JPG" [ref=f19e1127] [cursor=pointer]:
+              - generic [ref=f19e1128]:
+                - paragraph [ref=f19e1129]: Joint Photographic Experts Group JFIF
+                - generic [ref=f19e1130]: JPG
+            - button "WebP WEBP" [ref=f19e1131] [cursor=pointer]:
+              - generic [ref=f19e1132]:
+                - paragraph [ref=f19e1133]: WebP
+                - generic [ref=f19e1134]: WEBP
+            - button "CompuServe Graphics Interchange Format (GIF) GIF" [ref=f19e1135] [cursor=pointer]:
+              - generic [ref=f19e1136]:
+                - paragraph [ref=f19e1137]: CompuServe Graphics Interchange Format (GIF)
+                - generic [ref=f19e1138]: GIF
+            - button "Microsoft Windows ICO ICO" [ref=f19e1139] [cursor=pointer]:
+              - generic [ref=f19e1140]:
+                - paragraph [ref=f19e1141]: Microsoft Windows ICO
+                - generic [ref=f19e1142]: ICO
+            - button "Microsoft Windows bitmap image BMP Lossless" [ref=f19e1143] [cursor=pointer]:
+              - generic [ref=f19e1144]:
+                - paragraph [ref=f19e1145]: Microsoft Windows bitmap image
+                - generic [ref=f19e1146]: BMP
+              - generic [ref=f19e1147]: Lossless
+            - button "Tagged Image File Format TIFF Lossless" [ref=f19e1148] [cursor=pointer]:
+              - generic [ref=f19e1149]:
+                - paragraph [ref=f19e1150]: Tagged Image File Format
+                - generic [ref=f19e1151]: TIFF
+              - generic [ref=f19e1152]: Lossless
+            - button "Animated Portable Network Graphics APNG" [ref=f19e1153] [cursor=pointer]:
+              - generic [ref=f19e1154]:
+                - paragraph [ref=f19e1155]: Animated Portable Network Graphics
+                - generic [ref=f19e1156]: APNG
+            - button "Flexible Image Transport System FITS" [ref=f19e1157] [cursor=pointer]:
+              - generic [ref=f19e1158]:
+                - paragraph [ref=f19e1159]: Flexible Image Transport System
+                - generic [ref=f19e1160]: FITS
+            - button "AV1 Image File Format AVIF" [ref=f19e1161] [cursor=pointer]:
+              - generic [ref=f19e1162]:
+                - paragraph [ref=f19e1163]: AV1 Image File Format
+                - generic [ref=f19e1164]: AVIF
+            - button "Microsoft Windows bitmap image (V2) BMP2" [ref=f19e1165] [cursor=pointer]:
+              - generic [ref=f19e1166]:
+                - paragraph [ref=f19e1167]: Microsoft Windows bitmap image (V2)
+                - generic [ref=f19e1168]: BMP2
+            - button "Microsoft Windows bitmap image (V3) BMP3" [ref=f19e1169] [cursor=pointer]:
+              - generic [ref=f19e1170]:
+                - paragraph [ref=f19e1171]: Microsoft Windows bitmap image (V3)
+                - generic [ref=f19e1172]: BMP3
+            - button "Microsoft DirectDraw Surface DDS" [ref=f19e1173] [cursor=pointer]:
+              - generic [ref=f19e1174]:
+                - paragraph [ref=f19e1175]: Microsoft DirectDraw Surface
+                - generic [ref=f19e1176]: DDS
+            - button "SMPTE 268M-2003 (DPX 2.0) DPX" [ref=f19e1177] [cursor=pointer]:
+              - generic [ref=f19e1178]:
+                - paragraph [ref=f19e1179]: SMPTE 268M-2003 (DPX 2.0)
+                - generic [ref=f19e1180]: DPX
+            - button "High Dynamic-range (HDR) EXR" [ref=f19e1181] [cursor=pointer]:
+              - generic [ref=f19e1182]:
+                - paragraph [ref=f19e1183]: High Dynamic-range (HDR)
+                - generic [ref=f19e1184]: EXR
+            - button "Group 3 FAX G3" [ref=f19e1185] [cursor=pointer]:
+              - generic [ref=f19e1186]:
+                - paragraph [ref=f19e1187]: Group 3 FAX
+                - generic [ref=f19e1188]: G3
+            - button "CompuServe Graphics Interchange Format (GIF) GIF87" [ref=f19e1189] [cursor=pointer]:
+              - generic [ref=f19e1190]:
+                - paragraph [ref=f19e1191]: CompuServe Graphics Interchange Format (GIF)
+                - generic [ref=f19e1192]: GIF87
+            - button "Raw CCITT Group4 GROUP4" [ref=f19e1193] [cursor=pointer]:
+              - generic [ref=f19e1194]:
+                - paragraph [ref=f19e1195]: Raw CCITT Group4
+                - generic [ref=f19e1196]: GROUP4
+            - button "JPEG-2000 Code Stream Syntax J2C" [ref=f19e1197] [cursor=pointer]:
+              - generic [ref=f19e1198]:
+                - paragraph [ref=f19e1199]: JPEG-2000 Code Stream Syntax
+                - generic [ref=f19e1200]: J2C
+            - button "JPEG-2000 Code Stream Syntax J2K" [ref=f19e1201] [cursor=pointer]:
+              - generic [ref=f19e1202]:
+                - paragraph [ref=f19e1203]: JPEG-2000 Code Stream Syntax
+                - generic [ref=f19e1204]: J2K
+            - button "JPEG Network Graphics JNG" [ref=f19e1205] [cursor=pointer]:
+              - generic [ref=f19e1206]:
+                - paragraph [ref=f19e1207]: JPEG Network Graphics
+                - generic [ref=f19e1208]: JNG
+            - button "JPEG-2000 File Format Syntax JP2" [ref=f19e1209] [cursor=pointer]:
+              - generic [ref=f19e1210]:
+                - paragraph [ref=f19e1211]: JPEG-2000 File Format Syntax
+                - generic [ref=f19e1212]: JP2
+            - button "JPEG-2000 Code Stream Syntax JPC" [ref=f19e1213] [cursor=pointer]:
+              - generic [ref=f19e1214]:
+                - paragraph [ref=f19e1215]: JPEG-2000 Code Stream Syntax
+                - generic [ref=f19e1216]: JPC
+            - button "Joint Photographic Experts Group JFIF JPE" [ref=f19e1217] [cursor=pointer]:
+              - generic [ref=f19e1218]:
+                - paragraph [ref=f19e1219]: Joint Photographic Experts Group JFIF
+                - generic [ref=f19e1220]: JPE
+            - button "JPEG-2000 File Format Syntax JPM" [ref=f19e1221] [cursor=pointer]:
+              - generic [ref=f19e1222]:
+                - paragraph [ref=f19e1223]: JPEG-2000 File Format Syntax
+                - generic [ref=f19e1224]: JPM
+            - button "Joint Photographic Experts Group JFIF JPS" [ref=f19e1225] [cursor=pointer]:
+              - generic [ref=f19e1226]:
+                - paragraph [ref=f19e1227]: Joint Photographic Experts Group JFIF
+                - generic [ref=f19e1228]: JPS
+            - button "JPEG-2000 File Format Syntax JPT" [ref=f19e1229] [cursor=pointer]:
+              - generic [ref=f19e1230]:
+                - paragraph [ref=f19e1231]: JPEG-2000 File Format Syntax
+                - generic [ref=f19e1232]: JPT
+            - button "JPEG XL (ISO/IEC 18181) JXL" [ref=f19e1233] [cursor=pointer]:
+              - generic [ref=f19e1234]:
+                - paragraph [ref=f19e1235]: JPEG XL (ISO/IEC 18181)
+                - generic [ref=f19e1236]: JXL
+            - button "Common 2-dimensional bitmap format PAM" [ref=f19e1237] [cursor=pointer]:
+              - generic [ref=f19e1238]:
+                - paragraph [ref=f19e1239]: Common 2-dimensional bitmap format
+                - generic [ref=f19e1240]: PAM
+            - button "Portable bitmap format (black and white) PBM" [ref=f19e1241] [cursor=pointer]:
+              - generic [ref=f19e1242]:
+                - paragraph [ref=f19e1243]: Portable bitmap format (black and white)
+                - generic [ref=f19e1244]: PBM
+            - button "Apple Macintosh QuickDraw/PICT PCT" [ref=f19e1245] [cursor=pointer]:
+              - generic [ref=f19e1246]:
+                - paragraph [ref=f19e1247]: Apple Macintosh QuickDraw/PICT
+                - generic [ref=f19e1248]: PCT
+            - button "ZSoft IBM PC Paintbrush PCX" [ref=f19e1249] [cursor=pointer]:
+              - generic [ref=f19e1250]:
+                - paragraph [ref=f19e1251]: ZSoft IBM PC Paintbrush
+                - generic [ref=f19e1252]: PCX
+            - button "Portable graymap format (gray scale) PGM" [ref=f19e1253] [cursor=pointer]:
+              - generic [ref=f19e1254]:
+                - paragraph [ref=f19e1255]: Portable graymap format (gray scale)
+                - generic [ref=f19e1256]: PGM
+            - button "Joint Photographic Experts Group JFIF PJPEG" [ref=f19e1257] [cursor=pointer]:
+              - generic [ref=f19e1258]:
+                - paragraph [ref=f19e1259]: Joint Photographic Experts Group JFIF
+                - generic [ref=f19e1260]: PJPEG
+            - button "PNG inheriting bit-depth, color-type from original, if possible PNG00" [ref=f19e1261] [cursor=pointer]:
+              - generic [ref=f19e1262]:
+                - paragraph [ref=f19e1263]: PNG inheriting bit-depth, color-type from original, if possible
+                - generic [ref=f19e1264]: PNG00
+            - button "opaque or binary transparent 24-bit RGB PNG24" [ref=f19e1265] [cursor=pointer]:
+              - generic [ref=f19e1266]:
+                - paragraph [ref=f19e1267]: opaque or binary transparent 24-bit RGB
+                - generic [ref=f19e1268]: PNG24
+            - button "opaque or transparent 32-bit RGBA PNG32" [ref=f19e1269] [cursor=pointer]:
+              - generic [ref=f19e1270]:
+                - paragraph [ref=f19e1271]: opaque or transparent 32-bit RGBA
+                - generic [ref=f19e1272]: PNG32
+            - button "opaque or binary transparent 48-bit RGB PNG48" [ref=f19e1273] [cursor=pointer]:
+              - generic [ref=f19e1274]:
+                - paragraph [ref=f19e1275]: opaque or binary transparent 48-bit RGB
+                - generic [ref=f19e1276]: PNG48
+            - button "opaque or transparent 64-bit RGBA PNG64" [ref=f19e1277] [cursor=pointer]:
+              - generic [ref=f19e1278]:
+                - paragraph [ref=f19e1279]: opaque or transparent 64-bit RGBA
+                - generic [ref=f19e1280]: PNG64
+            - button "8-bit indexed with optional binary transparency PNG8" [ref=f19e1281] [cursor=pointer]:
+              - generic [ref=f19e1282]:
+                - paragraph [ref=f19e1283]: 8-bit indexed with optional binary transparency
+                - generic [ref=f19e1284]: PNG8
+            - button "Portable anymap PNM" [ref=f19e1285] [cursor=pointer]:
+              - generic [ref=f19e1286]:
+                - paragraph [ref=f19e1287]: Portable anymap
+                - generic [ref=f19e1288]: PNM
+            - button "Portable pixmap format (color) PPM" [ref=f19e1289] [cursor=pointer]:
+              - generic [ref=f19e1290]:
+                - paragraph [ref=f19e1291]: Portable pixmap format (color)
+                - generic [ref=f19e1292]: PPM
+            - button "Adobe Photoshop bitmap PSD" [ref=f19e1293] [cursor=pointer]:
+              - generic [ref=f19e1294]:
+                - paragraph [ref=f19e1295]: Adobe Photoshop bitmap
+                - generic [ref=f19e1296]: PSD
+            - button "Pyramid encoded TIFF PTIF" [ref=f19e1297] [cursor=pointer]:
+              - generic [ref=f19e1298]:
+                - paragraph [ref=f19e1299]: Pyramid encoded TIFF
+                - generic [ref=f19e1300]: PTIF
+            - button "SUN Rasterfile RAS" [ref=f19e1301] [cursor=pointer]:
+              - generic [ref=f19e1302]:
+                - paragraph [ref=f19e1303]: SUN Rasterfile
+                - generic [ref=f19e1304]: RAS
+            - button "Raw red, green, and blue samples RGB" [ref=f19e1305] [cursor=pointer]:
+              - generic [ref=f19e1306]:
+                - paragraph [ref=f19e1307]: Raw red, green, and blue samples
+                - generic [ref=f19e1308]: RGB
+            - button "Simple File Format Family Images SF3" [ref=f19e1309] [cursor=pointer]:
+              - generic [ref=f19e1310]:
+                - paragraph [ref=f19e1311]: Simple File Format Family Images
+                - generic [ref=f19e1312]: SF3
+            - button "Irix RGB image SGI" [ref=f19e1313] [cursor=pointer]:
+              - generic [ref=f19e1314]:
+                - paragraph [ref=f19e1315]: Irix RGB image
+                - generic [ref=f19e1316]: SGI
+            - button "Compressed Scalable Vector Graphics SVGZ" [ref=f19e1317] [cursor=pointer]:
+              - generic [ref=f19e1318]:
+                - paragraph [ref=f19e1319]: Compressed Scalable Vector Graphics
+                - generic [ref=f19e1320]: SVGZ
+            - button "Truevision Targa image TGA" [ref=f19e1321] [cursor=pointer]:
+              - generic [ref=f19e1322]:
+                - paragraph [ref=f19e1323]: Truevision Targa image
+                - generic [ref=f19e1324]: TGA
+            - button "Tagged Image File Format (64-bit) TIFF64" [ref=f19e1325] [cursor=pointer]:
+              - generic [ref=f19e1326]:
+                - paragraph [ref=f19e1327]: Tagged Image File Format (64-bit)
+                - generic [ref=f19e1328]: TIFF64
+            - button "Wireless Bitmap (level 0) image WBMP" [ref=f19e1329] [cursor=pointer]:
+              - generic [ref=f19e1330]:
+                - paragraph [ref=f19e1331]: Wireless Bitmap (level 0) image
+                - generic [ref=f19e1332]: WBMP
+            - button "X Windows system bitmap (black and white) XBM" [ref=f19e1333] [cursor=pointer]:
+              - generic [ref=f19e1334]:
+                - paragraph [ref=f19e1335]: X Windows system bitmap (black and white)
+                - generic [ref=f19e1336]: XBM
+            - button "X Windows system pixmap (color) XPM" [ref=f19e1337] [cursor=pointer]:
+              - generic [ref=f19e1338]:
+                - paragraph [ref=f19e1339]: X Windows system pixmap (color)
+                - generic [ref=f19e1340]: XPM
+            - button "Microsoft Windows ANI ANI" [ref=f19e1341] [cursor=pointer]:
+              - generic [ref=f19e1342]:
+                - paragraph [ref=f19e1343]: Microsoft Windows ANI
+                - generic [ref=f19e1344]: ANI
+            - button "Microsoft Windows CUR CUR" [ref=f19e1345] [cursor=pointer]:
+              - generic [ref=f19e1346]:
+                - paragraph [ref=f19e1347]: Microsoft Windows CUR
+                - generic [ref=f19e1348]: CUR
+            - button "Raw red, green, blue, and alpha samples RGBA Lossless" [ref=f19e1349] [cursor=pointer]:
+              - generic [ref=f19e1350]:
+                - paragraph [ref=f19e1351]: Raw red, green, blue, and alpha samples
+                - generic [ref=f19e1352]: RGBA
+              - generic [ref=f19e1353]: Lossless
+            - button "Quite OK Image QOI Lossless" [ref=f19e1354] [cursor=pointer]:
+              - generic [ref=f19e1355]:
+                - paragraph [ref=f19e1356]: Quite OK Image
+                - generic [ref=f19e1357]: QOI
+              - generic [ref=f19e1358]: Lossless
+            - button "Apple Icon Image ICNS" [ref=f19e1359] [cursor=pointer]:
+              - generic [ref=f19e1360]:
+                - paragraph [ref=f19e1361]: Apple Icon Image
+                - generic [ref=f19e1362]: ICNS
+            - button "Over The Air bitmap OTB" [ref=f19e1363] [cursor=pointer]:
+              - generic [ref=f19e1364]:
+                - paragraph [ref=f19e1365]: Over The Air bitmap
+                - generic [ref=f19e1366]: OTB
+        - generic [ref=f19e1367]:
+          - heading "Modelos 3D" [level=2] [ref=f19e1368]
+          - button "Wavefront OBJ OBJ" [ref=f19e1370] [cursor=pointer]:
+            - generic [ref=f19e1371]:
+              - paragraph [ref=f19e1372]: Wavefront OBJ
+              - generic [ref=f19e1373]: OBJ
+        - generic [ref=f19e1374]:
+          - heading "Outros" [level=2] [ref=f19e1375]
+          - generic [ref=f19e1376]:
+            - button "Opus Magnum puzzle PUZZLE" [ref=f19e1377] [cursor=pointer]:
+              - generic [ref=f19e1378]:
+                - paragraph [ref=f19e1379]: Opus Magnum puzzle
+                - generic [ref=f19e1380]: PUZZLE
+            - button "Opus Magnum molecule MOLECULE" [ref=f19e1381] [cursor=pointer]:
+              - generic [ref=f19e1382]:
+                - paragraph [ref=f19e1383]: Opus Magnum molecule
+                - generic [ref=f19e1384]: MOLECULE
+            - button "Minecraft Language Localization File LANG Lossless" [ref=f19e1385] [cursor=pointer]:
+              - generic [ref=f19e1386]:
+                - paragraph [ref=f19e1387]: Minecraft Language Localization File
+                - generic [ref=f19e1388]: LANG
+              - generic [ref=f19e1389]: Lossless
+        - generic [ref=f19e1390]:
+          - heading "Apresentações" [level=2] [ref=f19e1391]
+          - button "PresentationML Presentation PPTX" [ref=f19e1393] [cursor=pointer]:
+            - generic [ref=f19e1394]:
+              - paragraph [ref=f19e1395]: PresentationML Presentation
+              - generic [ref=f19e1396]: PPTX
+        - generic [ref=f19e1397]:
+          - heading "Texto" [level=2] [ref=f19e1398]
+          - generic [ref=f19e1399]:
+            - button "Plain Text TXT" [ref=f19e1400] [cursor=pointer]:
+              - generic [ref=f19e1401]:
+                - paragraph [ref=f19e1402]: Plain Text
+                - generic [ref=f19e1403]: TXT
+            - button "Plain Text (UTF-8 without BOM) TXT Lossless" [ref=f19e1404] [cursor=pointer]:
+              - generic [ref=f19e1405]:
+                - paragraph [ref=f19e1406]: Plain Text (UTF-8 without BOM)
+                - generic [ref=f19e1407]: TXT
+              - generic [ref=f19e1408]: Lossless
+            - button "Plain Text (UTF-8 with BOM) TXT Lossless" [ref=f19e1409] [cursor=pointer]:
+              - generic [ref=f19e1410]:
+                - paragraph [ref=f19e1411]: Plain Text (UTF-8 with BOM)
+                - generic [ref=f19e1412]: TXT
+              - generic [ref=f19e1413]: Lossless
+            - button "Plain Text (UTF-16 LE) TXT Lossless" [ref=f19e1414] [cursor=pointer]:
+              - generic [ref=f19e1415]:
+                - paragraph [ref=f19e1416]: Plain Text (UTF-16 LE)
+                - generic [ref=f19e1417]: TXT
+              - generic [ref=f19e1418]: Lossless
+            - button "Plain Text (UTF-16 BE) TXT Lossless" [ref=f19e1419] [cursor=pointer]:
+              - generic [ref=f19e1420]:
+                - paragraph [ref=f19e1421]: Plain Text (UTF-16 BE)
+                - generic [ref=f19e1422]: TXT
+              - generic [ref=f19e1423]: Lossless
+            - button "Plain Text (UTF-32 LE) TXT Lossless" [ref=f19e1424] [cursor=pointer]:
+              - generic [ref=f19e1425]:
+                - paragraph [ref=f19e1426]: Plain Text (UTF-32 LE)
+                - generic [ref=f19e1427]: TXT
+              - generic [ref=f19e1428]: Lossless
+            - button "Plain Text (UTF-32 BE) TXT Lossless" [ref=f19e1429] [cursor=pointer]:
+              - generic [ref=f19e1430]:
+                - paragraph [ref=f19e1431]: Plain Text (UTF-32 BE)
+                - generic [ref=f19e1432]: TXT
+              - generic [ref=f19e1433]: Lossless
+            - button "OpenDocument Text ODT" [ref=f19e1434] [cursor=pointer]:
+              - generic [ref=f19e1435]:
+                - paragraph [ref=f19e1436]: OpenDocument Text
+                - generic [ref=f19e1437]: ODT
+            - button "Rich Text Format RTF Lossless" [ref=f19e1438] [cursor=pointer]:
+              - generic [ref=f19e1439]:
+                - paragraph [ref=f19e1440]: Rich Text Format
+                - generic [ref=f19e1441]: RTF
+              - generic [ref=f19e1442]: Lossless
+            - button "ConTeXt TEX Lossless" [ref=f19e1443] [cursor=pointer]:
+              - generic [ref=f19e1444]:
+                - paragraph [ref=f19e1445]: ConTeXt
+                - generic [ref=f19e1446]: TEX
+              - generic [ref=f19e1447]: Lossless
+            - button "Hypertext Markup Language HTML Lossless" [ref=f19e1448] [cursor=pointer]:
+              - generic [ref=f19e1449]:
+                - paragraph [ref=f19e1450]: Hypertext Markup Language
+                - generic [ref=f19e1451]: HTML
+              - generic [ref=f19e1452]: Lossless
+            - button "Vimdoc TXT Lossless" [ref=f19e1453] [cursor=pointer]:
+              - generic [ref=f19e1454]:
+                - paragraph [ref=f19e1455]: Vimdoc
+                - generic [ref=f19e1456]: TXT
+              - generic [ref=f19e1457]: Lossless
+            - button "RTTTL RTTTL" [ref=f19e1458] [cursor=pointer]:
+              - generic [ref=f19e1459]:
+                - paragraph [ref=f19e1460]: RTTTL
+                - generic [ref=f19e1461]: RTTTL
+            - button "GRUB Init Tune GRUB" [ref=f19e1462] [cursor=pointer]:
+              - generic [ref=f19e1463]:
+                - paragraph [ref=f19e1464]: GRUB Init Tune
+                - generic [ref=f19e1465]: GRUB
+            - button "reStructuredText RST Lossless" [ref=f19e1466] [cursor=pointer]:
+              - generic [ref=f19e1467]:
+                - paragraph [ref=f19e1468]: reStructuredText
+                - generic [ref=f19e1469]: RST
+              - generic [ref=f19e1470]: Lossless
+            - button "Textile TEXTILE Lossless" [ref=f19e1471] [cursor=pointer]:
+              - generic [ref=f19e1472]:
+                - paragraph [ref=f19e1473]: Textile
+                - generic [ref=f19e1474]: TEXTILE
+              - generic [ref=f19e1475]: Lossless
+            - button "Windows Batch file BAT Lossless" [ref=f19e1476] [cursor=pointer]:
+              - generic [ref=f19e1477]:
+                - paragraph [ref=f19e1478]: Windows Batch file
+                - generic [ref=f19e1479]: BAT
+              - generic [ref=f19e1480]: Lossless
+            - button "Shell Script SH Lossless" [ref=f19e1481] [cursor=pointer]:
+              - generic [ref=f19e1482]:
+                - paragraph [ref=f19e1483]: Shell Script
+                - generic [ref=f19e1484]: SH
+              - generic [ref=f19e1485]: Lossless
+            - button "Forsyth–Edwards Notation FEN" [ref=f19e1486] [cursor=pointer]:
+              - generic [ref=f19e1487]:
+                - paragraph [ref=f19e1488]: Forsyth–Edwards Notation
+                - generic [ref=f19e1489]: FEN
+            - button "Portable Game Notation PGN Lossless" [ref=f19e1490] [cursor=pointer]:
+              - generic [ref=f19e1491]:
+                - paragraph [ref=f19e1492]: Portable Game Notation
+                - generic [ref=f19e1493]: PGN
+              - generic [ref=f19e1494]: Lossless
+        - generic [ref=f19e1495]:
+          - heading "Vídeos" [level=2] [ref=f19e1496]
+          - generic [ref=f19e1497]:
+            - button "MPEG-4 Part 14 MP4" [ref=f19e1498] [cursor=pointer]:
+              - generic [ref=f19e1499]:
+                - paragraph [ref=f19e1500]: MPEG-4 Part 14
+                - generic [ref=f19e1501]: MP4
+            - button "AVI (Audio Video Interleaved) AVI" [ref=f19e1502] [cursor=pointer]:
+              - generic [ref=f19e1503]:
+                - paragraph [ref=f19e1504]: AVI (Audio Video Interleaved)
+                - generic [ref=f19e1505]: AVI
+            - button "Matroska / WebM MKV" [ref=f19e1506] [cursor=pointer]:
+              - generic [ref=f19e1507]:
+                - paragraph [ref=f19e1508]: Matroska / WebM
+                - generic [ref=f19e1509]: MKV
+            - button "QuickTime / MOV MOV" [ref=f19e1510] [cursor=pointer]:
+              - generic [ref=f19e1511]:
+                - paragraph [ref=f19e1512]: QuickTime / MOV
+                - generic [ref=f19e1513]: MOV
+            - button "WebM WEBM" [ref=f19e1514] [cursor=pointer]:
+              - generic [ref=f19e1515]:
+                - paragraph [ref=f19e1516]: WebM
+                - generic [ref=f19e1517]: WEBM
+            - button "3GPP2 Multimedia Container 3G2" [ref=f19e1518] [cursor=pointer]:
+              - generic [ref=f19e1519]:
+                - paragraph [ref=f19e1520]: 3GPP2 Multimedia Container
+                - generic [ref=f19e1521]: 3G2
+            - button "3GPP Multimedia Container 3GP" [ref=f19e1522] [cursor=pointer]:
+              - generic [ref=f19e1523]:
+                - paragraph [ref=f19e1524]: 3GPP Multimedia Container
+                - generic [ref=f19e1525]: 3GP
+            - button "a64 - video for Commodore 64 A64" [ref=f19e1526] [cursor=pointer]:
+              - generic [ref=f19e1527]:
+                - paragraph [ref=f19e1528]: a64 - video for Commodore 64
+                - generic [ref=f19e1529]: A64
+            - button "CRI ADX ADX" [ref=f19e1530] [cursor=pointer]:
+              - generic [ref=f19e1531]:
+                - paragraph [ref=f19e1532]: CRI ADX
+                - generic [ref=f19e1533]: ADX
+            - button "AMV AMV" [ref=f19e1534] [cursor=pointer]:
+              - generic [ref=f19e1535]:
+                - paragraph [ref=f19e1536]: AMV
+                - generic [ref=f19e1537]: AMV
+            - button "Argonaut Games ASF ARGO_ASF" [ref=f19e1538] [cursor=pointer]:
+              - generic [ref=f19e1539]:
+                - paragraph [ref=f19e1540]: Argonaut Games ASF
+                - generic [ref=f19e1541]: ARGO_ASF
+            - button "Argonaut Games CVG ARGO_CVG" [ref=f19e1542] [cursor=pointer]:
+              - generic [ref=f19e1543]:
+                - paragraph [ref=f19e1544]: Argonaut Games CVG
+                - generic [ref=f19e1545]: ARGO_CVG
+            - button "Windows Media Video (WMV) ASF" [ref=f19e1546] [cursor=pointer]:
+              - generic [ref=f19e1547]:
+                - paragraph [ref=f19e1548]: Windows Media Video (WMV)
+                - generic [ref=f19e1549]: ASF
+            - button "ASF (Advanced / Active Streaming Format) ASF" [ref=f19e1550] [cursor=pointer]:
+              - generic [ref=f19e1551]:
+                - paragraph [ref=f19e1552]: ASF (Advanced / Active Streaming Format)
+                - generic [ref=f19e1553]: ASF
+            - button "AST (Audio Stream) AST" [ref=f19e1554] [cursor=pointer]:
+              - generic [ref=f19e1555]:
+                - paragraph [ref=f19e1556]: AST (Audio Stream)
+                - generic [ref=f19e1557]: AST
+            - button "SWF (ShockWave Flash) (AVM2) AVM2" [ref=f19e1558] [cursor=pointer]:
+              - generic [ref=f19e1559]:
+                - paragraph [ref=f19e1560]: SWF (ShockWave Flash) (AVM2)
+                - generic [ref=f19e1561]: AVM2
+            - button "raw AVS2-P2/IEEE1857.4 video AVS2" [ref=f19e1562] [cursor=pointer]:
+              - generic [ref=f19e1563]:
+                - paragraph [ref=f19e1564]: raw AVS2-P2/IEEE1857.4 video
+                - generic [ref=f19e1565]: AVS2
+            - button "AVS3-P2/IEEE1857.10 AVS3" [ref=f19e1566] [cursor=pointer]:
+              - generic [ref=f19e1567]:
+                - paragraph [ref=f19e1568]: AVS3-P2/IEEE1857.10
+                - generic [ref=f19e1569]: AVS3
+            - button "raw Chinese AVS (Audio Video Standard) video CAVSVIDEO" [ref=f19e1570] [cursor=pointer]:
+              - generic [ref=f19e1571]:
+                - paragraph [ref=f19e1572]: raw Chinese AVS (Audio Video Standard) video
+                - generic [ref=f19e1573]: CAVSVIDEO
+            - button "CRC testing CRC" [ref=f19e1574] [cursor=pointer]:
+              - generic [ref=f19e1575]:
+                - paragraph [ref=f19e1576]: CRC testing
+                - generic [ref=f19e1577]: CRC
+            - button "DASH Muxer DASH" [ref=f19e1578] [cursor=pointer]:
+              - generic [ref=f19e1579]:
+                - paragraph [ref=f19e1580]: DASH Muxer
+                - generic [ref=f19e1581]: DASH
+            - button "raw data DATA" [ref=f19e1582] [cursor=pointer]:
+              - generic [ref=f19e1583]:
+                - paragraph [ref=f19e1584]: raw data
+                - generic [ref=f19e1585]: DATA
+            - button "D-Cinema audio DAUD" [ref=f19e1586] [cursor=pointer]:
+              - generic [ref=f19e1587]:
+                - paragraph [ref=f19e1588]: D-Cinema audio
+                - generic [ref=f19e1589]: DAUD
+            - button "raw Dirac DIRAC" [ref=f19e1590] [cursor=pointer]:
+              - generic [ref=f19e1591]:
+                - paragraph [ref=f19e1592]: raw Dirac
+                - generic [ref=f19e1593]: DIRAC
+            - button "raw DNxHD (SMPTE VC-3) DNXHD" [ref=f19e1594] [cursor=pointer]:
+              - generic [ref=f19e1595]:
+                - paragraph [ref=f19e1596]: raw DNxHD (SMPTE VC-3)
+                - generic [ref=f19e1597]: DNXHD
+            - button "DV (Digital Video) DV" [ref=f19e1598] [cursor=pointer]:
+              - generic [ref=f19e1599]:
+                - paragraph [ref=f19e1600]: DV (Digital Video)
+                - generic [ref=f19e1601]: DV
+            - button "MPEG-2 PS (DVD VOB) DVD" [ref=f19e1602] [cursor=pointer]:
+              - generic [ref=f19e1603]:
+                - paragraph [ref=f19e1604]: MPEG-2 PS (DVD VOB)
+                - generic [ref=f19e1605]: DVD
+            - button "F4V Adobe Flash Video F4V" [ref=f19e1606] [cursor=pointer]:
+              - generic [ref=f19e1607]:
+                - paragraph [ref=f19e1608]: F4V Adobe Flash Video
+                - generic [ref=f19e1609]: F4V
+            - button "FFmpeg metadata in text FFMETADATA" [ref=f19e1610] [cursor=pointer]:
+              - generic [ref=f19e1611]:
+                - paragraph [ref=f19e1612]: FFmpeg metadata in text
+                - generic [ref=f19e1613]: FFMETADATA
+            - button "Fifo test muxer FIFO_TEST" [ref=f19e1614] [cursor=pointer]:
+              - generic [ref=f19e1615]:
+                - paragraph [ref=f19e1616]: Fifo test muxer
+                - generic [ref=f19e1617]: FIFO_TEST
+            - button "Sega FILM / CPK FILM_CPK" [ref=f19e1618] [cursor=pointer]:
+              - generic [ref=f19e1619]:
+                - paragraph [ref=f19e1620]: Sega FILM / CPK
+                - generic [ref=f19e1621]: FILM_CPK
+            - button "Adobe Filmstrip FILMSTRIP" [ref=f19e1622] [cursor=pointer]:
+              - generic [ref=f19e1623]:
+                - paragraph [ref=f19e1624]: Adobe Filmstrip
+                - generic [ref=f19e1625]: FILMSTRIP
+            - button "FLV (Flash Video) FLV" [ref=f19e1626] [cursor=pointer]:
+              - generic [ref=f19e1627]:
+                - paragraph [ref=f19e1628]: FLV (Flash Video)
+                - generic [ref=f19e1629]: FLV
+            - button "framecrc testing FRAMECRC" [ref=f19e1630] [cursor=pointer]:
+              - generic [ref=f19e1631]:
+                - paragraph [ref=f19e1632]: framecrc testing
+                - generic [ref=f19e1633]: FRAMECRC
+            - button "Per-frame hash testing FRAMEHASH" [ref=f19e1634] [cursor=pointer]:
+              - generic [ref=f19e1635]:
+                - paragraph [ref=f19e1636]: Per-frame hash testing
+                - generic [ref=f19e1637]: FRAMEHASH
+            - button "Per-frame MD5 testing FRAMEMD5" [ref=f19e1638] [cursor=pointer]:
+              - generic [ref=f19e1639]:
+                - paragraph [ref=f19e1640]: Per-frame MD5 testing
+                - generic [ref=f19e1641]: FRAMEMD5
+            - button "raw big-endian G.726 (\"left-justified\") G726" [ref=f19e1642] [cursor=pointer]:
+              - generic [ref=f19e1643]:
+                - paragraph [ref=f19e1644]: raw big-endian G.726 ("left-justified")
+                - generic [ref=f19e1645]: G726
+            - button "raw little-endian G.726 (\"right-justified\") G726LE" [ref=f19e1646] [cursor=pointer]:
+              - generic [ref=f19e1647]:
+                - paragraph [ref=f19e1648]: raw little-endian G.726 ("right-justified")
+                - generic [ref=f19e1649]: G726LE
+            - button "GXF (General eXchange Format) GXF" [ref=f19e1650] [cursor=pointer]:
+              - generic [ref=f19e1651]:
+                - paragraph [ref=f19e1652]: GXF (General eXchange Format)
+                - generic [ref=f19e1653]: GXF
+            - button "raw H.261 H261" [ref=f19e1654] [cursor=pointer]:
+              - generic [ref=f19e1655]:
+                - paragraph [ref=f19e1656]: raw H.261
+                - generic [ref=f19e1657]: H261
+            - button "raw H.263 H263" [ref=f19e1658] [cursor=pointer]:
+              - generic [ref=f19e1659]:
+                - paragraph [ref=f19e1660]: raw H.263
+                - generic [ref=f19e1661]: H263
+            - button "raw H.264 video H264" [ref=f19e1662] [cursor=pointer]:
+              - generic [ref=f19e1663]:
+                - paragraph [ref=f19e1664]: raw H.264 video
+                - generic [ref=f19e1665]: H264
+            - button "Hash testing HASH" [ref=f19e1666] [cursor=pointer]:
+              - generic [ref=f19e1667]:
+                - paragraph [ref=f19e1668]: Hash testing
+                - generic [ref=f19e1669]: HASH
+            - button "HDS Muxer HDS" [ref=f19e1670] [cursor=pointer]:
+              - generic [ref=f19e1671]:
+                - paragraph [ref=f19e1672]: HDS Muxer
+                - generic [ref=f19e1673]: HDS
+            - button "Apple HTTP Live Streaming HLS" [ref=f19e1674] [cursor=pointer]:
+              - generic [ref=f19e1675]:
+                - paragraph [ref=f19e1676]: Apple HTTP Live Streaming
+                - generic [ref=f19e1677]: HLS
+            - button "image2 sequence IMAGE2" [ref=f19e1678] [cursor=pointer]:
+              - generic [ref=f19e1679]:
+                - paragraph [ref=f19e1680]: image2 sequence
+                - generic [ref=f19e1681]: IMAGE2
+            - button "iPod H.264 MP4 (MPEG-4 Part 14) M4V" [ref=f19e1682] [cursor=pointer]:
+              - generic [ref=f19e1683]:
+                - paragraph [ref=f19e1684]: iPod H.264 MP4 (MPEG-4 Part 14)
+                - generic [ref=f19e1685]: M4V
+            - button "Berkeley/IRCAM/CARL Sound Format IRCAM" [ref=f19e1686] [cursor=pointer]:
+              - generic [ref=f19e1687]:
+                - paragraph [ref=f19e1688]: Berkeley/IRCAM/CARL Sound Format
+                - generic [ref=f19e1689]: IRCAM
+            - button "ISMV/ISMA (Smooth Streaming) ISMV" [ref=f19e1690] [cursor=pointer]:
+              - generic [ref=f19e1691]:
+                - paragraph [ref=f19e1692]: ISMV/ISMA (Smooth Streaming)
+                - generic [ref=f19e1693]: ISMV
+            - button "On2 IVF IVF" [ref=f19e1694] [cursor=pointer]:
+              - generic [ref=f19e1695]:
+                - paragraph [ref=f19e1696]: On2 IVF
+                - generic [ref=f19e1697]: IVF
+            - button "Simon & Schuster Interactive VAG KVAG" [ref=f19e1698] [cursor=pointer]:
+              - generic [ref=f19e1699]:
+                - paragraph [ref=f19e1700]: Simon & Schuster Interactive VAG
+                - generic [ref=f19e1701]: KVAG
+            - button "LRC lyrics LRC" [ref=f19e1702] [cursor=pointer]:
+              - generic [ref=f19e1703]:
+                - paragraph [ref=f19e1704]: LRC lyrics
+                - generic [ref=f19e1705]: LRC
+            - button "raw MPEG-4 video M4V" [ref=f19e1706] [cursor=pointer]:
+              - generic [ref=f19e1707]:
+                - paragraph [ref=f19e1708]: raw MPEG-4 video
+                - generic [ref=f19e1709]: M4V
+            - button "MD5 testing MD5" [ref=f19e1710] [cursor=pointer]:
+              - generic [ref=f19e1711]:
+                - paragraph [ref=f19e1712]: MD5 testing
+                - generic [ref=f19e1713]: MD5
+            - button "raw MJPEG video MJPG" [ref=f19e1714] [cursor=pointer]:
+              - generic [ref=f19e1715]:
+                - paragraph [ref=f19e1716]: raw MJPEG video
+                - generic [ref=f19e1717]: MJPG
+            - button "extract pts as timecode v2 format, as defined by mkvtoolnix MKVTIMESTAMP_V2" [ref=f19e1718] [cursor=pointer]:
+              - generic [ref=f19e1719]:
+                - paragraph [ref=f19e1720]: extract pts as timecode v2 format, as defined by mkvtoolnix
+                - generic [ref=f19e1721]: MKVTIMESTAMP_V2
+            - button "raw MLP MLP" [ref=f19e1722] [cursor=pointer]:
+              - generic [ref=f19e1723]:
+                - paragraph [ref=f19e1724]: raw MLP
+                - generic [ref=f19e1725]: MLP
+            - button "Yamaha SMAF MMF" [ref=f19e1726] [cursor=pointer]:
+              - generic [ref=f19e1727]:
+                - paragraph [ref=f19e1728]: Yamaha SMAF
+                - generic [ref=f19e1729]: MMF
+            - button "MPEG-1 Systems / MPEG program stream MPG" [ref=f19e1730] [cursor=pointer]:
+              - generic [ref=f19e1731]:
+                - paragraph [ref=f19e1732]: MPEG-1 Systems / MPEG program stream
+                - generic [ref=f19e1733]: MPG
+            - button "raw MPEG-1 video MPG" [ref=f19e1734] [cursor=pointer]:
+              - generic [ref=f19e1735]:
+                - paragraph [ref=f19e1736]: raw MPEG-1 video
+                - generic [ref=f19e1737]: MPG
+            - button "raw MPEG-2 video MPEG2VIDEO" [ref=f19e1738] [cursor=pointer]:
+              - generic [ref=f19e1739]:
+                - paragraph [ref=f19e1740]: raw MPEG-2 video
+                - generic [ref=f19e1741]: MPEG2VIDEO
+            - button "MPEG-TS (MPEG-2 Transport Stream) TS" [ref=f19e1742] [cursor=pointer]:
+              - generic [ref=f19e1743]:
+                - paragraph [ref=f19e1744]: MPEG-TS (MPEG-2 Transport Stream)
+                - generic [ref=f19e1745]: TS
+            - button "MIME multipart JPEG MJPG" [ref=f19e1746] [cursor=pointer]:
+              - generic [ref=f19e1747]:
+                - paragraph [ref=f19e1748]: MIME multipart JPEG
+                - generic [ref=f19e1749]: MJPG
+            - button "MXF (Material eXchange Format) MXF" [ref=f19e1750] [cursor=pointer]:
+              - generic [ref=f19e1751]:
+                - paragraph [ref=f19e1752]: MXF (Material eXchange Format)
+                - generic [ref=f19e1753]: MXF
+            - button "MXF (Material eXchange Format) D-10 Mapping MXF_D10" [ref=f19e1754] [cursor=pointer]:
+              - generic [ref=f19e1755]:
+                - paragraph [ref=f19e1756]: MXF (Material eXchange Format) D-10 Mapping
+                - generic [ref=f19e1757]: MXF_D10
+            - button "MXF (Material eXchange Format) Operational Pattern Atom MXF" [ref=f19e1758] [cursor=pointer]:
+              - generic [ref=f19e1759]:
+                - paragraph [ref=f19e1760]: MXF (Material eXchange Format) Operational Pattern Atom
+                - generic [ref=f19e1761]: MXF
+            - button "raw null video NULL" [ref=f19e1762] [cursor=pointer]:
+              - generic [ref=f19e1763]:
+                - paragraph [ref=f19e1764]: raw null video
+                - generic [ref=f19e1765]: "NULL"
+            - button "NUT NUT" [ref=f19e1766] [cursor=pointer]:
+              - generic [ref=f19e1767]:
+                - paragraph [ref=f19e1768]: NUT
+                - generic [ref=f19e1769]: NUT
+            - button "AV1 low overhead OBU OBU" [ref=f19e1770] [cursor=pointer]:
+              - generic [ref=f19e1771]:
+                - paragraph [ref=f19e1772]: AV1 low overhead OBU
+                - generic [ref=f19e1773]: OBU
+            - button "Ogg Video OGV" [ref=f19e1774] [cursor=pointer]:
+              - generic [ref=f19e1775]:
+                - paragraph [ref=f19e1776]: Ogg Video
+                - generic [ref=f19e1777]: OGV
+            - button "PSP MP4 (MPEG-4 Part 14) PSP" [ref=f19e1778] [cursor=pointer]:
+              - generic [ref=f19e1779]:
+                - paragraph [ref=f19e1780]: PSP MP4 (MPEG-4 Part 14)
+                - generic [ref=f19e1781]: PSP
+            - button "raw video RAWVIDEO" [ref=f19e1782] [cursor=pointer]:
+              - generic [ref=f19e1783]:
+                - paragraph [ref=f19e1784]: raw video
+                - generic [ref=f19e1785]: RAWVIDEO
+            - button "RealMedia RM" [ref=f19e1786] [cursor=pointer]:
+              - generic [ref=f19e1787]:
+                - paragraph [ref=f19e1788]: RealMedia
+                - generic [ref=f19e1789]: RM
+            - button "raw id RoQ ROQ" [ref=f19e1790] [cursor=pointer]:
+              - generic [ref=f19e1791]:
+                - paragraph [ref=f19e1792]: raw id RoQ
+                - generic [ref=f19e1793]: ROQ
+            - button "Lego Mindstorms RSO RSO" [ref=f19e1794] [cursor=pointer]:
+              - generic [ref=f19e1795]:
+                - paragraph [ref=f19e1796]: Lego Mindstorms RSO
+                - generic [ref=f19e1797]: RSO
+            - button "RTP output RTP" [ref=f19e1798] [cursor=pointer]:
+              - generic [ref=f19e1799]:
+                - paragraph [ref=f19e1800]: RTP output
+                - generic [ref=f19e1801]: RTP
+            - button "RTP/mpegts output format RTP_MPEGTS" [ref=f19e1802] [cursor=pointer]:
+              - generic [ref=f19e1803]:
+                - paragraph [ref=f19e1804]: RTP/mpegts output format
+                - generic [ref=f19e1805]: RTP_MPEGTS
+            - button "SAP output SAP" [ref=f19e1806] [cursor=pointer]:
+              - generic [ref=f19e1807]:
+                - paragraph [ref=f19e1808]: SAP output
+                - generic [ref=f19e1809]: SAP
+            - button "Scenarist Closed Captions SCC" [ref=f19e1810] [cursor=pointer]:
+              - generic [ref=f19e1811]:
+                - paragraph [ref=f19e1812]: Scenarist Closed Captions
+                - generic [ref=f19e1813]: SCC
+            - button "segment SEGMENT" [ref=f19e1814] [cursor=pointer]:
+              - generic [ref=f19e1815]:
+                - paragraph [ref=f19e1816]: segment
+                - generic [ref=f19e1817]: SEGMENT
+            - button "Loki SDL MJPEG SMJPEG" [ref=f19e1818] [cursor=pointer]:
+              - generic [ref=f19e1819]:
+                - paragraph [ref=f19e1820]: Loki SDL MJPEG
+                - generic [ref=f19e1821]: SMJPEG
+            - button "Smooth Streaming Muxer SMOOTHSTREAMING" [ref=f19e1822] [cursor=pointer]:
+              - generic [ref=f19e1823]:
+                - paragraph [ref=f19e1824]: Smooth Streaming Muxer
+                - generic [ref=f19e1825]: SMOOTHSTREAMING
+            - button "SoX native SOX" [ref=f19e1826] [cursor=pointer]:
+              - generic [ref=f19e1827]:
+                - paragraph [ref=f19e1828]: SoX native
+                - generic [ref=f19e1829]: SOX
+            - button "IEC 61937 (used on S/PDIF - IEC958) SPDIF" [ref=f19e1830] [cursor=pointer]:
+              - generic [ref=f19e1831]:
+                - paragraph [ref=f19e1832]: IEC 61937 (used on S/PDIF - IEC958)
+                - generic [ref=f19e1833]: SPDIF
+            - button "streaming segment muxer / stream_segment STREAM_SEGMENT" [ref=f19e1834] [cursor=pointer]:
+              - generic [ref=f19e1835]:
+                - paragraph [ref=f19e1836]: streaming segment muxer / stream_segment
+                - generic [ref=f19e1837]: STREAM_SEGMENT
+            - button "streaming segment muxer / ssegment SSEGMENT" [ref=f19e1838] [cursor=pointer]:
+              - generic [ref=f19e1839]:
+                - paragraph [ref=f19e1840]: streaming segment muxer / ssegment
+                - generic [ref=f19e1841]: SSEGMENT
+            - button "Per-stream hash testing STREAMHASH" [ref=f19e1842] [cursor=pointer]:
+              - generic [ref=f19e1843]:
+                - paragraph [ref=f19e1844]: Per-stream hash testing
+                - generic [ref=f19e1845]: STREAMHASH
+            - button "MPEG-2 PS (SVCD) VOB" [ref=f19e1846] [cursor=pointer]:
+              - generic [ref=f19e1847]:
+                - paragraph [ref=f19e1848]: MPEG-2 PS (SVCD)
+                - generic [ref=f19e1849]: VOB
+            - button "SWF (ShockWave Flash) SWF" [ref=f19e1850] [cursor=pointer]:
+              - generic [ref=f19e1851]:
+                - paragraph [ref=f19e1852]: SWF (ShockWave Flash)
+                - generic [ref=f19e1853]: SWF
+            - button "Multiple muxer tee TEE" [ref=f19e1854] [cursor=pointer]:
+              - generic [ref=f19e1855]:
+                - paragraph [ref=f19e1856]: Multiple muxer tee
+                - generic [ref=f19e1857]: TEE
+            - button "raw TrueHD TRUEHD" [ref=f19e1858] [cursor=pointer]:
+              - generic [ref=f19e1859]:
+                - paragraph [ref=f19e1860]: raw TrueHD
+                - generic [ref=f19e1861]: TRUEHD
+            - button "uncoded framecrc testing UNCODEDFRAMECRC" [ref=f19e1862] [cursor=pointer]:
+              - generic [ref=f19e1863]:
+                - paragraph [ref=f19e1864]: uncoded framecrc testing
+                - generic [ref=f19e1865]: UNCODEDFRAMECRC
+            - button "raw VC-1 video VC1" [ref=f19e1866] [cursor=pointer]:
+              - generic [ref=f19e1867]:
+                - paragraph [ref=f19e1868]: raw VC-1 video
+                - generic [ref=f19e1869]: VC1
+            - button "VC-1 test bitstream VC1TEST" [ref=f19e1870] [cursor=pointer]:
+              - generic [ref=f19e1871]:
+                - paragraph [ref=f19e1872]: VC-1 test bitstream
+                - generic [ref=f19e1873]: VC1TEST
+            - button "MPEG-1 Systems / MPEG program stream (VCD) VCD" [ref=f19e1874] [cursor=pointer]:
+              - generic [ref=f19e1875]:
+                - paragraph [ref=f19e1876]: MPEG-1 Systems / MPEG program stream (VCD)
+                - generic [ref=f19e1877]: VCD
+            - button "MPEG-2 PS (VOB) VOB" [ref=f19e1878] [cursor=pointer]:
+              - generic [ref=f19e1879]:
+                - paragraph [ref=f19e1880]: MPEG-2 PS (VOB)
+                - generic [ref=f19e1881]: VOB
+            - button "Sony Wave64 W64" [ref=f19e1882] [cursor=pointer]:
+              - generic [ref=f19e1883]:
+                - paragraph [ref=f19e1884]: Sony Wave64
+                - generic [ref=f19e1885]: W64
+            - button "WebM Chunk Muxer CHK" [ref=f19e1886] [cursor=pointer]:
+              - generic [ref=f19e1887]:
+                - paragraph [ref=f19e1888]: WebM Chunk Muxer
+                - generic [ref=f19e1889]: CHK
+            - button "Westwood Studios audio WSAUD" [ref=f19e1890] [cursor=pointer]:
+              - generic [ref=f19e1891]:
+                - paragraph [ref=f19e1892]: Westwood Studios audio
+                - generic [ref=f19e1893]: WSAUD
+            - button "Windows Television (WTV) WTV" [ref=f19e1894] [cursor=pointer]:
+              - generic [ref=f19e1895]:
+                - paragraph [ref=f19e1896]: Windows Television (WTV)
+                - generic [ref=f19e1897]: WTV
+            - button "YUV4MPEG pipe YUV4MPEGPIPE" [ref=f19e1898] [cursor=pointer]:
+              - generic [ref=f19e1899]:
+                - paragraph [ref=f19e1900]: YUV4MPEG pipe
+                - generic [ref=f19e1901]: YUV4MPEGPIPE
+            - button "Windows Media Video WMV" [ref=f19e1902] [cursor=pointer]:
+              - generic [ref=f19e1903]:
+                - paragraph [ref=f19e1904]: Windows Media Video
+                - generic [ref=f19e1905]: WMV
+      - generic [ref=f19e1906]:
+        - link "Voltar" [ref=f19e1907] [cursor=pointer]:
+          - /url: /edit
+        - button "Converter agora" [disabled]
+  - contentinfo [ref=f19e107]:
+    - generic [ref=f19e108]:
+      - generic [ref=f19e109]: natura convert
+      - paragraph [ref=f19e113]: © 2025 Natura &Co — Bem Estar Bem
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=f19e1910]:
+        - generic [ref=f19e1914]: Erro ao aplicar edições. Prosseguindo com arquivo original.

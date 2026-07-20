@@ -1,0 +1,329 @@
+import { FormatDefinition } from "@/converter-engine/FormatHandler"
+
+export const Category = {
+    DATA: "data",
+    IMAGE: "image",
+    VIDEO: "video",
+    VECTOR: "vector",
+    DOCUMENT: "document",
+    TEXT: "text",
+    AUDIO: "audio",
+    ARCHIVE: "archive",
+    SPREADSHEET: "spreadsheet",
+    PRESENTATION: "presentation",
+    FONT: "font",
+    CODE: "code",
+    DATABASE: "database",
+    MODEL: "model",
+}
+
+/**
+ * Common format definitions which can be used to reduce boilerplate definitions
+ */
+const CommonFormats = {
+    // images
+    PNG: new FormatDefinition(
+        "Portable Network Graphics",
+        "png",
+        "png",
+        "image/png",
+        Category.IMAGE
+    ),
+    JPEG: new FormatDefinition(
+        "Joint Photographic Experts Group JFIF",
+        "jpeg",
+        "jpg",
+        "image/jpeg",
+        Category.IMAGE
+    ),
+    WEBP: new FormatDefinition(
+        "WebP",
+        "webp",
+        "webp",
+        "image/webp",
+        Category.IMAGE
+    ),
+    TIFF: new FormatDefinition(
+        "Tagged Image File Format",
+        "tiff",
+        "tiff",
+        "image/tiff",
+        Category.IMAGE
+    ),
+    BMP: new FormatDefinition(
+        "Microsoft Windows bitmap image",
+        "bmp",
+        "bmp",
+        "image/bmp",
+        Category.IMAGE
+    ),
+    GIF: new FormatDefinition(
+        "CompuServe Graphics Interchange Format (GIF)",
+        "gif",
+        "gif",
+        "image/gif",
+        [Category.IMAGE, Category.VIDEO]
+    ),
+    SVG: new FormatDefinition(
+        "Scalable Vector Graphics",
+        "svg",
+        "svg",
+        "image/svg+xml",
+        [Category.IMAGE, Category.VECTOR, Category.DOCUMENT]
+    ),
+    // texts
+    JSON: new FormatDefinition(
+        "JavaScript Object Notation",
+        "json",
+        "json",
+        "application/json",
+        Category.DATA
+    ),
+    XML: new FormatDefinition(
+        "Extensible Markup Language",
+        "xml",
+        "xml",
+        "application/xml",
+        Category.DATA
+    ),
+    YML: new FormatDefinition(
+        "YAML Ain't Markup Language",
+        "yaml",
+        "yml",
+        "application/yaml",
+        Category.DATA
+    ),
+    CSV: new FormatDefinition(
+        "Comma Separated Values",
+        "csv",
+        "csv",
+        "text/csv",
+        Category.DATA
+    ),
+    TEXT: new FormatDefinition(
+        "Plain Text",
+        "text",
+        "txt",
+        "text/plain",
+        Category.TEXT
+    ),
+    HTML: new FormatDefinition(
+        "Hypertext Markup Language",
+        "html",
+        "html",
+        "text/html",
+        [Category.DOCUMENT, Category.TEXT]
+    ),
+    MD: new FormatDefinition(
+        "Markdown Document",
+        "markdown",
+        "markdown",
+        "text/markdown",
+        [Category.DOCUMENT, Category.TEXT]
+    ),
+    BATCH: new FormatDefinition(
+        "Windows Batch file",
+        "batch",
+        "bat",
+        "text/windows-batch",
+        Category.TEXT
+    ),
+    PYTHON: new FormatDefinition(
+        "Python Script",
+        "py",
+        "py",
+        "text/x-python",
+        Category.CODE
+    ),
+    CSS: new FormatDefinition(
+        "CSS Stylesheet",
+        "css",
+        "css",
+        "text/css",
+        Category.CODE
+    ),
+    SH: new FormatDefinition(
+        "Shell Script",
+        "sh",
+        "sh",
+        "application/x-sh",
+        Category.TEXT
+    ),
+    // audio
+    MP3: new FormatDefinition(
+        "MP3 Audio",
+        "mp3",
+        "mp3",
+        "audio/mpeg",
+        Category.AUDIO
+    ),
+    WAV: new FormatDefinition(
+        "Waveform Audio File Format",
+        "wav",
+        "wav",
+        "audio/wav",
+        Category.AUDIO
+    ),
+    OGG: new FormatDefinition(
+        "Ogg Audio",
+        "ogg",
+        "ogg",
+        "audio/ogg",
+        Category.AUDIO
+    ),
+    FLAC: new FormatDefinition(
+        "Free Lossless Audio Codec",
+        "flac",
+        "flac",
+        "audio/flac",
+        Category.AUDIO
+    ),
+    // video
+    MP4: new FormatDefinition(
+        "MPEG-4 Part 14",
+        "mp4",
+        "mp4",
+        "video/mp4",
+        Category.VIDEO
+    ),
+    WMV: new FormatDefinition(
+        "Windows Media Video",
+        "wmv",
+        "wmv",
+        "video/x-ms-asf",
+        Category.VIDEO
+    ),
+    // archive
+    ZIP: new FormatDefinition(
+        "ZIP Archive",
+        "zip",
+        "zip",
+        "application/zip",
+        Category.ARCHIVE
+    ),
+    TAR: new FormatDefinition(
+        "Tape Archive",
+        "tar",
+        "tar",
+        "application/x-tar",
+        Category.ARCHIVE
+    ),
+    // documents
+    PDF: new FormatDefinition(
+        "Portable Document Format",
+        "pdf",
+        "pdf",
+        "application/pdf",
+        Category.DOCUMENT
+    ),
+    MRPACK: new FormatDefinition(
+        "Modrinth Modpack",
+        "mrpack",
+        "mrpack",
+        "application/x-modrinth-modpack+zip",
+        Category.ARCHIVE
+    ),
+    EPUB: new FormatDefinition(
+        "Electronic Publication",
+        "epub",
+        "epub",
+        "application/epub+zip",
+        Category.DOCUMENT
+    ),
+    AZW3: new FormatDefinition(
+        "Amazon Kindle Format 8",
+        "azw3",
+        "azw3",
+        "application/vnd.amazon.mobi8-ebook",
+        Category.DOCUMENT
+    ),
+    MOBI: new FormatDefinition(
+        "Mobipocket e-book",
+        "mobi",
+        "mobi",
+        "application/x-mobipocket-ebook",
+        Category.DOCUMENT
+    ),
+    // documents - Microsoft Office
+    DOCX: new FormatDefinition(
+        "WordprocessingML Document",
+        "docx",
+        "docx",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        Category.DOCUMENT
+    ),
+    XLSX: new FormatDefinition(
+        "SpreadsheetML Workbook",
+        "xlsx",
+        "xlsx",
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        [Category.SPREADSHEET, Category.DOCUMENT]
+    ),
+    PPTX: new FormatDefinition(
+        "PresentationML Presentation",
+        "pptx",
+        "pptx",
+        "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+        [Category.PRESENTATION, Category.DOCUMENT]
+    ),
+    // fonts
+    TTF: new FormatDefinition(
+        "TrueType Font",
+        "ttf",
+        "ttf",
+        "font/ttf",
+        [Category.FONT]
+    ),
+    OTF: new FormatDefinition(
+        "OpenType Font",
+        "otf",
+        "otf",
+        "font/otf",
+        [Category.FONT]
+    ),
+    WOFF: new FormatDefinition(
+        "Web Open Font Format",
+        "woff",
+        "woff",
+        "font/woff",
+        [Category.FONT]
+    ),
+    WOFF2: new FormatDefinition(
+        "Web Open Font Format 2.0",
+        "woff2",
+        "woff2",
+        "font/woff2",
+        [Category.FONT]
+    ),
+    // music notation
+    MUSICXML: new FormatDefinition(
+        "MusicXML",
+        "musicxml",
+        "musicxml",
+        "application/vnd.recordare.musicxml+xml",
+        Category.DOCUMENT
+    ),
+    MXL: new FormatDefinition(
+        "MusicXML Compressed",
+        "mxl",
+        "mxl",
+        "application/vnd.recordare.musicxml",
+        Category.DOCUMENT
+    ),
+    EXE: new FormatDefinition(
+        "Windows Portable Executable",
+        "exe",
+        "exe",
+        "application/vnd.microsoft.portable-executable",
+        Category.CODE
+    ),
+    TYPST: new FormatDefinition(
+        "Typst Document",
+        "typst",
+        "typ",
+        "text/typst",
+        [Category.DOCUMENT, Category.TEXT]
+    )
+}
+
+export default CommonFormats

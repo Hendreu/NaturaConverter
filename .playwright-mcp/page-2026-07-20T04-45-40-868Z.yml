@@ -1,0 +1,93 @@
+- generic [ref=f15e2]:
+  - banner [ref=f15e3]:
+    - generic [ref=f15e4]:
+      - link "natura convert" [ref=f15e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=f15e9]:
+        - link "Converter" [ref=f15e10] [cursor=pointer]:
+          - /url: /
+        - link "Ferramentas" [ref=f15e11] [cursor=pointer]:
+          - /url: "#ferramentas"
+        - link "Sobre" [ref=f15e12] [cursor=pointer]:
+          - /url: "#sobre"
+      - link "Começar agora" [ref=f15e13] [cursor=pointer]:
+        - /url: /
+  - main [ref=f15e14]:
+    - navigation "Breadcrumb" [ref=f15e15]:
+      - list [ref=f15e16]:
+        - listitem [ref=f15e17]:
+          - link "Início" [ref=f15e18] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f15e21]:
+          - generic [ref=f15e22]: Convert
+        - listitem [ref=f15e25]:
+          - generic [ref=f15e26]: Conversor Universal
+    - generic [ref=f15e27]:
+      - generic [ref=f15e28]:
+        - generic [ref=f15e29]: Bem Estar Bem
+        - heading [level=1] [ref=f15e31]:
+          - text: Conversor
+          - emphasis [ref=f15e32]: Universal
+          - text: de Arquivos
+        - paragraph [ref=f15e33]: Arraste e solte um arquivo ou clique para selecionar. Converta entre centenas de formatos diretamente no navegador.
+      - generic [ref=f15e36] [cursor=pointer]:
+        - button "Arraste um arquivo aqui ou clique para selecionar Selecionar arquivo" [ref=f15e37]
+        - paragraph [ref=f15e42]: Arraste um arquivo aqui
+        - paragraph [ref=f15e43]: ou clique para selecionar
+        - generic [ref=f15e44]: Selecionar arquivo
+    - generic [ref=f15e48]:
+      - generic [ref=f15e49]:
+        - heading [level=2] [ref=f15e50]:
+          - text: Como converter arquivos
+          - emphasis [ref=f15e51]: online
+        - paragraph [ref=f15e52]: "Siga estas etapas simples:"
+      - list [ref=f15e53]:
+        - listitem [ref=f15e54]:
+          - generic [ref=f15e55]: "1"
+          - paragraph [ref=f15e56]: Arraste e solte seu arquivo na área designada ou clique para selecionar.
+        - listitem [ref=f15e57]:
+          - generic [ref=f15e58]: "2"
+          - paragraph [ref=f15e59]: Escolha o formato de saída desejado entre centenas de opções compatíveis.
+        - listitem [ref=f15e60]:
+          - generic [ref=f15e61]: "3"
+          - paragraph [ref=f15e62]: Clique em converter e baixe seu arquivo convertido instantaneamente.
+    - generic [ref=f15e63]:
+      - heading [level=2] [ref=f15e65]:
+        - text: Por que escolher o
+        - emphasis [ref=f15e66]: Natura Convert
+      - generic [ref=f15e67]:
+        - generic [ref=f15e68]:
+          - heading "Conversão universal" [level=3] [ref=f15e74]
+          - paragraph [ref=f15e75]: Suporte a mais de 300 formatos de arquivo. Documentos, imagens, áudio, vídeo e muito mais.
+        - generic [ref=f15e76]:
+          - heading "Privacidade garantida" [level=3] [ref=f15e81]
+          - paragraph [ref=f15e82]: Seus arquivos são processados localmente no navegador. Nada é enviado para servidores externos.
+        - generic [ref=f15e83]:
+          - heading "Rápido e gratuito" [level=3] [ref=f15e87]
+          - paragraph [ref=f15e88]: Conversão instantânea sem limitações. Sem cadastro, sem watermark, sem complicação.
+    - generic [ref=f15e90]:
+      - heading [level=2] [ref=f15e92]:
+        - text: Dúvidas?
+        - emphasis [ref=f15e93]: Nós temos as respostas.
+      - generic [ref=f15e94]:
+        - group [ref=f15e95]:
+          - generic "Quais formatos de arquivo são suportados? +" [ref=f15e96] [cursor=pointer]:
+            - text: Quais formatos de arquivo são suportados?
+            - generic [ref=f15e97]: +
+        - group [ref=f15e98]:
+          - generic "Meus documentos estão protegidos? +" [ref=f15e99] [cursor=pointer]:
+            - text: Meus documentos estão protegidos?
+            - generic [ref=f15e100]: +
+        - group [ref=f15e101]:
+          - generic "Posso converter arquivos grandes? +" [ref=f15e102] [cursor=pointer]:
+            - text: Posso converter arquivos grandes?
+            - generic [ref=f15e103]: +
+        - group [ref=f15e104]:
+          - generic "Preciso instalar algum programa? +" [ref=f15e105] [cursor=pointer]:
+            - text: Preciso instalar algum programa?
+            - generic [ref=f15e106]: +
+  - contentinfo [ref=f15e107]:
+    - generic [ref=f15e108]:
+      - generic [ref=f15e109]: natura convert
+      - paragraph [ref=f15e113]: © 2025 Natura &Co — Bem Estar Bem
+  - region "Notifications alt+T"

@@ -1,0 +1,1 @@
+export default function parseDOCX(bytes: Uint8Array): Promise<string>;

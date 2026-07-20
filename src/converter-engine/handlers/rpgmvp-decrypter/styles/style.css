@@ -1,0 +1,468 @@
+/**
+ * Author: Peter Dragicevic [peter@petschko.org]
+ * Authors-Website: http://petschko.org/
+ * Date: 30.03.2017
+ * Time: 22:18
+ */
+
+/* Global-Reset */
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+/* Remove bootstrap Styles */
+legend {
+	border: 0;
+	padding: 0 5px;
+	width: inherit;
+	font-size: inherit;
+	margin-bottom: 0;
+	color: grey;
+}
+
+fieldset {
+	border: 1px dotted grey;
+	padding: 5px 10px;
+	border-radius: 2px;
+}
+
+/* Spaces, sizes etc */
+body {
+	padding: 0 40px;
+}
+
+footer {
+	margin-top: 2em;
+	padding-top: 1em;
+	margin-bottom: 2em;
+	border-top: #EBEBEB solid 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+input[type="file"] {
+	cursor: pointer;
+	max-width: 100%;
+}
+
+button {
+	max-width: 100%;
+}
+
+input[type="radio"]{
+	margin-right: 5px;
+}
+
+label {
+	font-weight: normal;
+}
+
+.info {
+	border: 1px solid #000;
+	background-color: #FFF5D3;
+	padding: 15px 20px;
+}
+
+.title {
+	margin-bottom: 2em;
+}
+
+.title h1 {
+	margin-top: .25em;
+}
+
+img.logo {
+	max-width: 64px;
+}
+
+.content-container {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#headerInfo > div {
+	margin: 10px 0;
+}
+
+.fileInfoArea > fieldset {
+	margin-bottom: 10px;
+}
+
+#decryptCode {
+	width: 300px;
+	max-width: 100%;
+	background-color: #FFABAB;
+}
+
+.fileList > button {
+	margin-bottom: 10px;
+}
+
+#systemFile {
+	display: inline-block;
+	margin: auto;
+}
+
+.button-grid-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 0;
+	grid-row-gap: 0;
+	margin: 10px 0;
+}
+
+.button-grid-wrapper .box1 {
+	display: flex;
+}
+
+.button-grid-wrapper .box2 {
+	text-align: right;
+}
+
+.fileInfo {
+	margin: 5px 0;
+}
+
+.fileInfo > span,
+.fileInfo > a,
+.fileInfo > s {
+	margin-right: 5px;
+}
+
+img.valid_css {
+	border: 0;
+	width: 88px;
+	height:31px;
+}
+
+div#headerInfo {
+	min-width: 350px;
+	margin-top: 10px;
+	padding: 10px 15px;
+	display: inline-block;
+	border: 1px dotted #808080;
+}
+
+div#headerInfo > h3 {
+	margin-top: 0;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+
+h1.inline-heading,
+h2.inline-heading,
+h3.inline-heading,
+h4.inline-heading,
+h5.inline-heading,
+h6.inline-heading {
+	display: inline-block;
+}
+
+div#headerInfo > div.tooltip {
+	margin-top: 0;
+}
+
+div#headerInfo label {
+	display: block;
+}
+
+div#headerInfo input[type="text"] {
+	margin-left: 10px;
+	float: right;
+}
+
+#howTo li {
+	margin-bottom: 10px;
+}
+
+.bottom-space {
+	margin-bottom: 5px;
+}
+
+/* Hide some info's (not important on local use) */
+.info,
+.css_valid {
+	display: none;
+}
+
+/* Backgrounds */
+noscript > div {
+	background-color: #FFABAB;
+	padding: 10px 20px;
+}
+
+.valid {
+	background-color: #B8FFAB !important;
+}
+
+.invalid {
+	background-color: #F00 !important;
+}
+
+.manualChange {
+	background-color: #FFE6AB !important;
+}
+
+/* Text-Colors align etc */
+a,
+.link {
+	color: #2F00EE;
+	border-color: #2F00EE;
+}
+
+a:visited {
+	color: #551A8B;
+}
+
+a:active,
+a:focus,
+.link:active,
+.link:focus {
+	color: #E00;
+	border-color: #E00;
+}
+
+a.btn {
+	color: #FFF;
+}
+
+.red,
+.errorFile {
+	color: #F00;
+}
+
+.grey {
+	color: #C9C9C9;
+}
+
+.yellow {
+	color: #B38400;
+}
+
+.green {
+	color: #00B700;
+}
+
+.center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+/* 2 Rows */
+.wrapper {
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.left, .right {
+	text-align: left;
+	vertical-align: top;
+	display: inline-block;
+	width: 45%;
+}
+
+/* Button-Image align fixes */
+button#encrypt {
+	padding-left: 0;
+}
+
+button#decrypt {
+	padding-left: 3px;
+}
+
+button#decrypt > img,
+button#decrypt > span,
+button#encrypt > img,
+button#encrypt > span {
+	vertical-align: middle;
+}
+
+/* Help stuff (like tooltips etc) */
+.link {
+	cursor: pointer;
+	display: inline-block;
+}
+
+.link:active,
+.link:focus {
+	border: 1px dotted;
+}
+
+.help {
+	color: #B713FF;
+	border-color: #B713FF !important;
+}
+
+.tooltip.help {
+	opacity: 1;
+	z-index: auto;
+	position: relative;
+	display: inline-block; /* Ensure inline-block */
+	border-bottom: 1px dotted #555;
+	cursor: help;
+}
+
+.tooltip .tooltipText {
+	position: absolute;
+	visibility: hidden;
+	display: block;
+
+	margin-top: 10px;
+	min-width: 200px;
+	background-color: #555;
+	color: #FFF;
+	text-align: center;
+	padding: 5px 7px;
+	border-radius: 6px;
+
+	/* Fade in tooltip */
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+.tooltipText.longText {
+	width: 400px;
+	font-size: 14px;
+}
+
+.tooltip:hover .tooltipText {
+	visibility: visible;
+	opacity: 1;
+	z-index: 999;
+}
+
+.tooltipText p {
+	margin: 0;
+}
+
+/* Drag & Drop Styles */
+.drag-drop-file {
+	position: relative;
+}
+
+.drag-drop-file input[type="file"] {
+	outline: 2px dashed #92b0b3;
+	outline-offset: -10px;
+	padding: 60px 0;
+	background-color: transparent;
+	text-align: center;
+	width: 100%;
+}
+
+.drag-drop-file:before {
+	content: "(or) Drag and Drop files here.";
+	color: #92b0b3;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: -1000;
+}
+
+/* Media-Queries */
+@media all and (min-width: 801px) and (max-width: 1080px) {
+	#home a.menu-link,
+	button#decrypt,
+	button#encrypt-mv,
+	button#encrypt-mz,
+	button.clearFileList {
+		display: inline-block;
+		margin-top: 5px;
+	}
+
+	.button-grid-wrapper,
+	.button-grid-wrapper .box1 {
+		display: block;
+	}
+
+	.button-grid-wrapper .box2 {
+		margin-top: 8px;
+		text-align: center;
+	}
+
+	.button-grid-wrapper .box2 button {
+		width: 100%;
+	}
+
+	/* Drag & Drop Styles */
+	.drag-drop-file input[type="file"] {
+		padding-bottom: 90px;
+	}
+}
+
+@media all and (max-width: 800px) {
+	.nav-tabs {
+		padding-bottom: 10px;
+	}
+
+	.nav-tabs > li {
+		float: none;
+	}
+
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:hover,
+	.nav-tabs > li.active > a:focus {
+		border-bottom-color: #ddd;
+		border-radius: 4px;
+	}
+
+	.nav-tabs > li > a:hover,
+	.nav-tabs > li > a:focus {
+		border-color:#eee;
+		border-radius: 4px;
+	}
+
+	#home a.menu-link,
+	button#decrypt,
+	button#encrypt-mv,
+	button#encrypt-mz,
+	button.clearFileList {
+		display: inline-block;
+		margin-top: 5px;
+	}
+
+	.left,
+	.right {
+		display: block;
+		width: 100%;
+	}
+
+	.right {
+		border-top: solid 2px #707070;
+		margin-top: 20px;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.button-grid-wrapper,
+	.button-grid-wrapper .box1 {
+		display: block;
+	}
+
+	.button-grid-wrapper .box2 {
+		margin-top: 8px;
+		text-align: center;
+	}
+
+	.button-grid-wrapper .box2 button {
+		width: 100%;
+	}
+
+	/* Drag & Drop Styles */
+	.drag-drop-file input[type="file"] {
+		padding-bottom: 90px;
+	}
+}

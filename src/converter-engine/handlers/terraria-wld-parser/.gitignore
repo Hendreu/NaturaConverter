@@ -1,0 +1,8 @@
+/node_modules
+/dist
+/.idea
+/coverage
+*.tsbuildinfo
+/docs/README.md
+
+.claude/

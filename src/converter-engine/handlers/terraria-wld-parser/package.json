@@ -1,0 +1,44 @@
+{
+  "name": "terraria-world-file",
+  "version": "1.0.7",
+  "main": "./dist/index.cjs",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@vitest/coverage-v8": "^4.0.7",
+    "prettier": "^3.6.2",
+    "rollup-plugin-const-enum": "^1.1.4",
+    "tsdown": "^0.16.0",
+    "typedoc": "^0.28.14",
+    "typedoc-plugin-markdown": "^4.9.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.7"
+  },
+  "scripts": {
+    "build": "tsdown src/index.ts src/platform/node.ts src/platform/browser.ts --format esm --format cjs --clean",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "docs": "typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "source": "./src/index.ts"
+    },
+    "./browser": {
+      "import": "./dist/platform/browser.mjs",
+      "require": "./dist/platform/browser.cjs",
+      "source": "./src/platform/browser.ts"
+    },
+    "./node": {
+      "import": "./dist/platform/node.mjs",
+      "require": "./dist/platform/node.cjs",
+      "source": "./src/platform/node.ts"
+    }
+  },
+  "dependencies": {},
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts"
+}

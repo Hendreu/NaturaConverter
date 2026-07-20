@@ -1,0 +1,1 @@
+export default function parseXLSX(bytes: Uint8Array): Promise<string>;

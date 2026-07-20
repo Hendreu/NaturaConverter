@@ -1,0 +1,20 @@
+- generic [ref=f7e2]:
+  - banner [ref=f7e3]:
+    - generic [ref=f7e4]:
+      - link "natura convert" [ref=f7e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=f7e9]:
+        - link "Converter" [ref=f7e10] [cursor=pointer]:
+          - /url: /
+        - link "Ferramentas" [ref=f7e11] [cursor=pointer]:
+          - /url: "#ferramentas"
+        - link "Sobre" [ref=f7e12] [cursor=pointer]:
+          - /url: "#sobre"
+      - link "Começar agora" [ref=f7e13] [cursor=pointer]:
+        - /url: /
+  - main [ref=f7e14]
+  - contentinfo [ref=f7e15]:
+    - generic [ref=f7e16]:
+      - generic [ref=f7e17]: natura convert
+      - paragraph [ref=f7e21]: © 2025 Natura &Co — Bem Estar Bem
+  - region "Notifications alt+T"

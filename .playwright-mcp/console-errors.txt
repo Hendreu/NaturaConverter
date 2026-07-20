@@ -1,0 +1,49 @@
+Total messages: 9 (Errors: 5, Warnings: 1)
+Returning 19 messages for level "error"
+
+[ERROR] [vite] SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' @ http://localhost:3000/@vite/client:928
+[ERROR] [vite] Failed to reload /src/routes/index.tsx?tsr-split=component. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:3000/@vite/client:928
+[ERROR] [vite] SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' @ http://localhost:3000/@vite/client:928
+[ERROR] [vite] Failed to reload /src/routes/index.tsx?tsr-split=component. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:3000/@vite/client:928
+[ERROR] [vite] SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' @ http://localhost:3000/@vite/client:928
+[ERROR] [vite] Failed to reload /src/routes/index.tsx?tsr-split=component. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:3000/@vite/client:928
+[ERROR] [vite] SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' @ http://localhost:3000/@vite/client:928
+[ERROR] [vite] Failed to reload /src/routes/index.tsx?tsr-split=component. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:3000/@vite/client:928
+[ERROR] SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' @ http://localhost:3000/src/routes/__root.tsx:79
+[ERROR] SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' @ http://localhost:3000/src/routes/__root.tsx:79
+[ERROR] SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' @ http://localhost:3000/src/routes/__root.tsx:79
+[ERROR] SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' @ http://localhost:3000/src/routes/__root.tsx:79
+[ERROR] %o
+
+%s
+
+%s
+ SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' The above error occurred in the <Lazy> component. React will try to recreate this component tree from scratch using the error boundary you provided, CatchBoundaryImpl. @ http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=2111a004:5273
+[ERROR] SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' @ http://localhost:3000/src/routes/__root.tsx:79
+[ERROR] SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' @ http://localhost:3000/src/routes/__root.tsx:79
+[ERROR] SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' @ http://localhost:3000/src/routes/__root.tsx:79
+[ERROR] SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' @ http://localhost:3000/src/routes/__root.tsx:79
+[ERROR] %o
+
+%s
+
+%s
+ SyntaxError: The requested module '/node_modules/.vite/deps/wavefile.js?v=1e5a268b' does not provide an export named 'default' The above error occurred in the <Lazy> component. React will try to recreate this component tree from scratch using the error boundary you provided, CatchBoundaryImpl. @ http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=2111a004:5273
+Error: Switched to client rendering because the server rendering errored:
+
+[vite] Named export 'WaveFile' not found. The requested module 'wavefile' is a CommonJS module, which may not support all module.exports as named exports.
+CommonJS modules can always be imported via the default export, for example using:
+
+import pkg from 'wavefile';
+const {WaveFile} = pkg;
+
+    at analyzeImportedModDifference (file:///C:/Natura/ConverterPDF/pdf-love-easy/node_modules/vite/dist/node/module-runner.js:526:10)
+    at ModuleRunner.processImport (file:///C:/Natura/ConverterPDF/pdf-love-easy/node_modules/vite/dist/node/module-runner.js:1144:54)
+    at ModuleRunner.cachedRequest (file:///C:/Natura/ConverterPDF/pdf-love-easy/node_modules/vite/dist/node/module-runner.js:1166:59)
+    at async eval (C:\Natura\ConverterPDF\pdf-love-easy\src\converter-engine\handlers\meyda.ts:5:1)
+    at async ESModulesEvaluator.runInlinedModule (file:///C:/Natura/ConverterPDF/pdf-love-easy/node_modules/vite/dist/node/module-runner.js:1006:3)
+    at async ModuleRunner.directRequest (file:///C:/Natura/ConverterPDF/pdf-love-easy/node_modules/vite/dist/node/module-runner.js:1259:59)
+    at async ModuleRunner.cachedRequest (file:///C:/Natura/ConverterPDF/pdf-love-easy/node_modules/vite/dist/node/module-runner.js:1166:73)
+    at async eval (C:\Natura\ConverterPDF\pdf-love-easy\src\converter-engine\handlers\index.ts:5:1)
+    at async ESModulesEvaluator.runInlinedModule (file:///C:/Natura/ConverterPDF/pdf-love-easy/node_modules/vite/dist/node/module-runner.js:1006:3)
+    at async ModuleRunner.directRequest (file:///C:/Natura/ConverterPDF/pdf-love-easy/node_modules/vite/dist/node/module-runner.js:1259:59)

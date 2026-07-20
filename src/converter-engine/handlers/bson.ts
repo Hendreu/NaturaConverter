@@ -1,0 +1,81 @@
+﻿import { FormatDefinition } from "../FormatHandler.ts";
+import type { FileData, FileFormat, FormatHandler } from "../FormatHandler.ts";
+import CommonFormats, { Category } from "@/converter-engine/CommonFormats.ts";
+import { BSON } from "bson";
+
+const bsonFormat = new FormatDefinition(
+  "Binary JSON",
+  "bson",
+  "bson",
+  "application/bson",
+  Category.DATA
+);
+
+class bsonHandler implements FormatHandler {
+
+  public name: string = "bson";
+
+  public supportedFormats?: FileFormat[] = [
+    CommonFormats.JSON.supported("json", true, true, true),
+    bsonFormat.supported("bson", true, true, true)
+  ];
+
+  public ready: boolean = false;
+
+  async init() {
+    this.ready = true;
+  }
+
+  async doConvert(
+    inputFiles: FileData[],
+    inputFormat: FileFormat,
+    outputFormat: FileFormat
+  ): Promise<FileData[]> {
+    switch (inputFormat.mime) {
+      case CommonFormats.JSON.mime:
+        if (outputFormat.mime !== bsonFormat.mime) {
+          throw new TypeError(`Unsupported output format: ${outputFormat.internal}`);
+        }
+
+        return inputFiles.map(file => {
+          const text = new TextDecoder().decode(file.bytes);
+          let jsonData = JSON.parse(text);
+
+          // BSON required the root to be an object.
+          if (Array.isArray(jsonData)) {
+            jsonData = { root: jsonData };
+          }
+
+          const bsonResult = BSON.serialize(jsonData);
+          const name = file.name.split(".").slice(0, -1).join(".") + ".bson";
+
+          return {
+            name,
+            bytes: bsonResult
+          };
+        });
+
+      case bsonFormat.mime:
+        if (outputFormat.mime !== CommonFormats.JSON.mime) {
+          throw new TypeError(`Unsupported output format: ${outputFormat.internal}`);
+        }
+
+        return inputFiles.map(file => {
+          const bsonData = BSON.deserialize(file.bytes);
+          const text = JSON.stringify(bsonData);
+
+          const name = file.name.split(".").slice(0, -1).join(".") + ".json";
+
+          return {
+            name,
+            bytes: new TextEncoder().encode(text)
+          };
+        });
+
+      default:
+        throw new TypeError(`Unsupported input format: ${inputFormat.internal}`);
+    }
+  }
+}
+
+export default bsonHandler;

@@ -1,0 +1,1 @@
+export default function parsePPTX(bytes: Uint8Array): Promise<string>;

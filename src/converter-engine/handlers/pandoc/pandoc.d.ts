@@ -1,0 +1,2 @@
+export function query(options: { query: string }): Promise<string[]>;
+export function convert(options: unknown, stdin: unknown, files: unknown): Promise<{ stdout: string; stderr: string; warnings: unknown }>;

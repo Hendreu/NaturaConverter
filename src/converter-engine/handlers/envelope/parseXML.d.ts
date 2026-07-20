@@ -1,0 +1,1 @@
+export default function parseXML(text: string): unknown;

@@ -1,0 +1,39 @@
+- generic [ref=f19e2]:
+  - banner [ref=f19e3]:
+    - generic [ref=f19e4]:
+      - link "natura convert" [ref=f19e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=f19e9]:
+        - link "Converter" [ref=f19e10] [cursor=pointer]:
+          - /url: /
+        - link "Ferramentas" [ref=f19e11] [cursor=pointer]:
+          - /url: "#ferramentas"
+        - link "Sobre" [ref=f19e12] [cursor=pointer]:
+          - /url: "#sobre"
+      - link "Começar agora" [ref=f19e13] [cursor=pointer]:
+        - /url: /
+  - main [ref=f19e14]:
+    - navigation "Breadcrumb" [ref=f19e1917]:
+      - list [ref=f19e1918]:
+        - listitem [ref=f19e1919]:
+          - link "Início" [ref=f19e1920] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f19e1923]:
+          - link "Convert" [ref=f19e1924] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f19e1927]:
+          - link "Editar" [ref=f19e1928] [cursor=pointer]:
+            - /url: /edit
+        - listitem [ref=f19e1931]:
+          - link "Formato" [ref=f19e1932] [cursor=pointer]:
+            - /url: /format
+        - listitem [ref=f19e1935]:
+          - generic [ref=f19e1936]: Download
+    - generic [ref=f19e1942]:
+      - heading "Convertendo..." [level=1] [ref=f19e1943]
+      - paragraph [ref=f19e1944]: Isso pode levar alguns segundos...
+  - contentinfo [ref=f19e107]:
+    - generic [ref=f19e108]:
+      - generic [ref=f19e109]: natura convert
+      - paragraph [ref=f19e113]: © 2025 Natura &Co — Bem Estar Bem
+  - region "Notifications alt+T"

@@ -1,0 +1,8 @@
+/.devcontainer
+/.idea
+/test
+/coverage
+/docs
+.nvmrc
+.prettierrc
+tsconfig.json
