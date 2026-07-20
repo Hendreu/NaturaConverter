@@ -15,7 +15,6 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Toaster } from "@/components/ui/sonner";
 
-
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -91,8 +90,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Natura Convert — Conversor Universal" },
       {
         property: "og:description",
-        content:
-          "Converta arquivos entre centenas de formatos direto no navegador. Bem Estar Bem.",
+        content: "Converta arquivos entre centenas de formatos direto no navegador. Bem Estar Bem.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -105,9 +103,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
-
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -137,7 +134,6 @@ function RootComponent() {
       <div className="flex min-h-screen flex-col">
         <SiteHeader />
         <main className="flex-1">
-          {/* Required: nested routes render here. */}
           <Outlet />
         </main>
         <SiteFooter />
@@ -146,4 +142,3 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
-
