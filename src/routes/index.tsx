@@ -1,7 +1,8 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useCallback, useRef, useState } from "react";
-import { Upload, ShieldCheck, Zap, Layers, ArrowRight } from "lucide-react";
+import { Upload, ShieldCheck, Zap, Layers, ArrowRight, Loader2 } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { Card } from "@/components/ui/card";
 import { setFile, setDetectedFormat } from "@/stores/file-store";
 import { initEngine, detectFormat } from "@/converter-engine/engine";
 
@@ -13,9 +14,11 @@ function Home() {
   const navigate = useNavigate();
   const inputRef = useRef<HTMLInputElement>(null);
   const [dragging, setDragging] = useState(false);
+  const [processing, setProcessing] = useState(false);
 
   const handleFile = useCallback(
     async (file: File) => {
+      setProcessing(true);
       if (typeof window !== "undefined") {
         sessionStorage.setItem(
           "natura-convert:file",
@@ -42,6 +45,26 @@ function Home() {
     if (file) handleFile(file);
   };
 
+  if (processing) {
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 px-6 backdrop-blur-sm">
+        <Card className="flex max-w-md flex-col items-center gap-6 rounded-3xl border border-border bg-card p-12 shadow-lg">
+          <span className="grid size-20 place-items-center rounded-full bg-primary-soft text-primary">
+            <Loader2 className="size-10 animate-spin" strokeWidth={1.6} />
+          </span>
+          <div>
+            <h1 className="font-display text-3xl font-medium md:text-4xl">
+              Processando arquivo...
+            </h1>
+            <p className="mt-3 text-muted-foreground">
+              Estamos identificando o formato e preparando a conversão.
+            </p>
+          </div>
+        </Card>
+      </div>
+    );
+  }
+
   return (
     <>
       <Breadcrumbs
@@ -64,8 +87,8 @@ function Home() {
             <br /> de Arquivos
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
-            Arraste e solte um arquivo ou clique para selecionar. Converta entre
-            centenas de formatos diretamente no navegador.
+            Arraste e solte um arquivo ou clique para selecionar. Converta entre centenas de
+            formatos diretamente no navegador.
           </p>
         </div>
 
@@ -103,9 +126,7 @@ function Home() {
             <p className="mt-6 font-display text-2xl font-medium text-foreground">
               Arraste um arquivo aqui
             </p>
-            <p className="mt-1.5 text-sm text-muted-foreground">
-              ou clique para selecionar
-            </p>
+            <p className="mt-1.5 text-sm text-muted-foreground">ou clique para selecionar</p>
             <span className="mt-8 inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background">
               Selecionar arquivo
               <ArrowRight className="size-4" />
@@ -130,16 +151,11 @@ function Home() {
               "Escolha o formato de saída desejado entre centenas de opções compatíveis.",
               "Clique em converter e baixe seu arquivo convertido instantaneamente.",
             ].map((text, i) => (
-              <li
-                key={i}
-                className="relative rounded-3xl border border-border bg-card p-8"
-              >
+              <li key={i} className="relative rounded-3xl border border-border bg-card p-8">
                 <span className="absolute -top-5 left-8 grid size-11 place-items-center rounded-full bg-primary font-display text-lg font-semibold text-primary-foreground shadow-md shadow-primary/25">
                   {i + 1}
                 </span>
-                <p className="mt-4 text-base leading-relaxed text-foreground">
-                  {text}
-                </p>
+                <p className="mt-4 text-base leading-relaxed text-foreground">{text}</p>
               </li>
             ))}
           </ol>
@@ -150,8 +166,7 @@ function Home() {
       <section id="sobre" className="mx-auto max-w-6xl px-6 py-24">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-4xl font-medium">
-            Por que escolher o{" "}
-            <em className="not-italic text-primary">Natura Convert</em>
+            Por que escolher o <em className="not-italic text-primary">Natura Convert</em>
           </h2>
         </div>
 
