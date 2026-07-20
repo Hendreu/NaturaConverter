@@ -7,15 +7,16 @@ let _outputFormat: FileFormat | null = null;
 
 export function setFile(file: File) {
   _file = file;
+  _detectedFormat = null;
+  _editedBytes = null;
+  _outputFormat = null;
 }
 
 export function getFile() {
   return _file;
 }
 
-export function setDetectedFormat(
-  detected: { format: FileFormat; handler: FormatHandler } | null,
-) {
+export function setDetectedFormat(detected: { format: FileFormat; handler: FormatHandler } | null) {
   _detectedFormat = detected;
 }
 

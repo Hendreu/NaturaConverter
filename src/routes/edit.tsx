@@ -15,7 +15,8 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { getFile, getDetectedFormat, setEditedBytes } from "@/stores/file-store";
+import { getFile, getDetectedFormat, setEditedBytes, clearStore } from "@/stores/file-store";
+import { initEngine, detectFormat } from "@/converter-engine/engine";
 import { toast } from "sonner";
 import { renderPdfThumbnails, type ThumbnailPage } from "@/lib/pdf-thumbnails";
 import { applyEdits, type PageEditState } from "@/lib/pdf-edit";
@@ -42,50 +43,63 @@ function EditPage() {
   const [dragIndex, setDragIndex] = useState<number | null>(null);
   const [dropIndex, setDropIndex] = useState<number | null>(null);
   const [applying, setApplying] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const bytesRef = useRef<ArrayBuffer | null>(null);
 
   useEffect(() => {
     const file = getFile();
     if (!file) {
+      clearStore();
       navigate({ to: "/" });
       return;
     }
 
     setFileName(file.name);
 
-    const detected = getDetectedFormat();
-    const pdfByType = file.type === "application/pdf";
-    const pdfByDetect = detected?.format.format.toLowerCase() === "pdf";
+    (async () => {
+      try {
+        await initEngine();
+      } catch (err) {
+        console.error("Failed to initialize conversion engine:", err);
+        setError("Não foi possível inicializar o motor de conversão. Tente recarregar a página.");
+        setLoading(false);
+        return;
+      }
 
-    if (!pdfByType && !pdfByDetect) {
-      setIsPdf(false);
-      setLoading(false);
-      return;
-    }
+      const detected = getDetectedFormat() ?? detectFormat(file);
+      const pdfByType = file.type === "application/pdf";
+      const pdfByDetect = detected?.format.format.toLowerCase() === "pdf";
 
-    setIsPdf(true);
+      if (!pdfByType && !pdfByDetect) {
+        setIsPdf(false);
+        setLoading(false);
+        return;
+      }
 
-    file
-      .arrayBuffer()
-      .then((buf) => {
-        bytesRef.current = buf;
-        return renderPdfThumbnails(buf);
-      })
-      .then((thumbs) => {
+      setIsPdf(true);
+
+      try {
+        const buf = await file.arrayBuffer();
+        bytesRef.current = buf.slice(0);
+        const thumbs = await renderPdfThumbnails(buf);
         setPages(thumbs.map((t) => ({ thumbnail: t, rotation: 0 })));
         setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error("Failed to render PDF thumbnails:", err);
+        setError(err instanceof Error ? err.message : "Erro ao renderizar miniaturas do PDF.");
         setLoading(false);
-      });
+      }
+    })();
   }, [navigate]);
 
   const rotate = useCallback((index: number, dir: 1 | -1) => {
     setPages((prev) =>
       prev.map((p, i) =>
         i === index
-          ? { ...p, rotation: (((p.rotation + dir * 90) % 360) + 360) % 360 as 0 | 90 | 180 | 270 }
+          ? {
+              ...p,
+              rotation: ((((p.rotation + dir * 90) % 360) + 360) % 360) as 0 | 90 | 180 | 270,
+            }
           : p,
       ),
     );
@@ -97,7 +111,8 @@ function EditPage() {
 
   const movePage = useCallback((from: number, to: number) => {
     setPages((prev) => {
-      if (from === to || from < 0 || to < 0 || from >= prev.length || to >= prev.length) return prev;
+      if (from === to || from < 0 || to < 0 || from >= prev.length || to >= prev.length)
+        return prev;
       const next = [...prev];
       const [moved] = next.splice(from, 1);
       next.splice(to, 0, moved);
@@ -145,9 +160,8 @@ function EditPage() {
       navigate({ to: "/format" });
     } catch (err) {
       console.error("Failed to apply edits:", err);
-      toast.error("Erro ao aplicar edições. Prosseguindo com arquivo original.");
-      setEditedBytes(null);
-      navigate({ to: "/format" });
+      toast.error("Erro ao aplicar edições: " + (err instanceof Error ? err.message : String(err)));
+      setApplying(false);
     }
   }, [isPdf, pages, navigate]);
 
@@ -155,11 +169,7 @@ function EditPage() {
     return (
       <>
         <Breadcrumbs
-          items={[
-            { label: "Início", to: "/" },
-            { label: "Convert", to: "/" },
-            { label: "Editar" },
-          ]}
+          items={[{ label: "Início", to: "/" }, { label: "Convert", to: "/" }, { label: "Editar" }]}
         />
         <section className="mx-auto max-w-6xl px-6 pb-10 pt-8">
           <div className="flex items-center justify-center py-32">
@@ -170,15 +180,41 @@ function EditPage() {
     );
   }
 
+  if (error) {
+    return (
+      <>
+        <Breadcrumbs
+          items={[{ label: "Início", to: "/" }, { label: "Convert", to: "/" }, { label: "Editar" }]}
+        />
+        <section className="mx-auto max-w-6xl px-6 pb-10 pt-8">
+          <h1 className="font-display text-4xl font-medium md:text-5xl">
+            Ajuste seu <em className="text-primary">arquivo</em>
+          </h1>
+          <Card className="mt-10 rounded-3xl border border-border bg-card p-10 text-center">
+            <div className="mx-auto grid size-16 place-items-center rounded-full bg-cream">
+              <FileWarning className="size-8 text-muted-foreground" />
+            </div>
+            <p className="mt-6 font-display text-2xl font-medium">{error}</p>
+            <p className="mt-2 text-muted-foreground">
+              Arquivo: <span className="font-medium text-foreground">{fileName}</span>
+            </p>
+            <Link
+              to="/"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground hover:border-foreground"
+            >
+              <ArrowLeft className="size-4" /> Voltar
+            </Link>
+          </Card>
+        </section>
+      </>
+    );
+  }
+
   if (!isPdf) {
     return (
       <>
         <Breadcrumbs
-          items={[
-            { label: "Início", to: "/" },
-            { label: "Convert", to: "/" },
-            { label: "Editar" },
-          ]}
+          items={[{ label: "Início", to: "/" }, { label: "Convert", to: "/" }, { label: "Editar" }]}
         />
         <section className="mx-auto max-w-6xl px-6 pb-10 pt-8">
           <h1 className="font-display text-4xl font-medium md:text-5xl">
@@ -209,11 +245,7 @@ function EditPage() {
   return (
     <>
       <Breadcrumbs
-        items={[
-          { label: "Início", to: "/" },
-          { label: "Convert", to: "/" },
-          { label: "Editar" },
-        ]}
+        items={[{ label: "Início", to: "/" }, { label: "Convert", to: "/" }, { label: "Editar" }]}
       />
 
       <section className="mx-auto max-w-6xl px-6 pb-10 pt-8">
@@ -226,8 +258,7 @@ function EditPage() {
               Rotacione, reordene e exclua páginas antes de converter.
             </p>
             <p className="mt-3 text-sm text-muted-foreground">
-              Arquivo:{" "}
-              <span className="font-medium text-foreground">{fileName}</span>
+              Arquivo: <span className="font-medium text-foreground">{fileName}</span>
             </p>
           </div>
         </div>
@@ -259,7 +290,10 @@ function EditPage() {
                     "hover:border-primary/40",
                   ].join(" ")}
                 >
-                  <div className="relative grid place-items-center overflow-hidden rounded-2xl bg-cream p-4" style={{ minHeight: "16rem" }}>
+                  <div
+                    className="relative grid place-items-center overflow-hidden rounded-2xl bg-cream p-4"
+                    style={{ minHeight: "16rem" }}
+                  >
                     <img
                       src={page.thumbnail.dataUrl}
                       alt={`Página ${page.thumbnail.id}`}
@@ -348,7 +382,7 @@ function EditPage() {
           </Link>
           <Button
             onClick={handleProceed}
-            disabled={applying}
+            disabled={applying || !bytesRef.current}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-[1.02]"
           >
             {applying ? "Carregando..." : "Escolher formato"} <ArrowRight className="size-4" />

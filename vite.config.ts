@@ -85,7 +85,14 @@ export default defineConfig({
       }),
     ],
     optimizeDeps: {
-      exclude: ["@ffmpeg/ffmpeg", "@imagemagick/magick-wasm", "7z-wasm", "@sqlite.org/sqlite-wasm", "@bokuweb/zstd-wasm", "@yowasp/clang"],
+      exclude: [
+        "@ffmpeg/ffmpeg",
+        "@imagemagick/magick-wasm",
+        "7z-wasm",
+        "@sqlite.org/sqlite-wasm",
+        "@bokuweb/zstd-wasm",
+        "@yowasp/clang",
+      ],
     },
 
     build: {

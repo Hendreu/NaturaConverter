@@ -10,10 +10,10 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
   },
   "dependencies": {
-    "7z-wasm": "^1.2.0",
     "@bjorn3/browser_wasi_shim": "^0.4.2",
     "@bokuweb/zstd-wasm": "^0.0.27",
     "@ffmpeg/core": "^0.12.10",
@@ -60,6 +60,7 @@
     "@tanstack/router-plugin": "^1.168.18",
     "@toon-format/toon": "^2.3.1",
     "@yowasp/clang": "^22.0.0-git20542-10",
+    "7z-wasm": "^1.2.0",
     "bson": "^7.3.1",
     "celaria-formats": "^1.0.2",
     "chess.js": "^1.4.0",
@@ -142,6 +143,7 @@
     "prettier": "^3.7.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
-    "vite": "^8.0.16"
+    "vite": "^8.0.16",
+    "vitest": "^4.0.7"
   }
 }
