@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Cache the install layer independently of source changes.
 COPY package.json bun.lock ./
-RUN bun install
+RUN bun install --frozen-lockfile
 
 # Source is needed for viteStaticCopy (pulls WASM/JS from node_modules + src/)
 COPY . .
@@ -21,9 +21,13 @@ WORKDIR /app
 # Self-contained server + public assets (wasm, js, hashed bundles).
 COPY --from=builder /app/.output ./.output
 
+# Copy IP-display helper so logs show the host IPs on startup.
+COPY docker-entrypoint.js ./
+
 ENV NODE_ENV=production
 ENV PORT=3000
 ENV NITRO_HOST=0.0.0.0
 EXPOSE 3000
 
-CMD ["node", ".output/server/index.mjs"]
+# Print accessible URLs, then start the Nitro server.
+CMD ["sh", "-c", "node docker-entrypoint.js && node .output/server/index.mjs"]

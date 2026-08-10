@@ -1,4 +1,18 @@
+# NaturaConverter — Docker Compose
+# Red Hat / CLI-only usage: after `docker compose up`, run `docker compose logs app`
+# to see the server IPs printed by the startup helper.
+
 services:
   app:
     build: .
+    # Use host networking on Linux so the container shares the host IP stack.
+    # The startup script prints all accessible IPs to the logs.
     network_mode: "host"
+    # Alternative (Docker Desktop / non-Linux): comment out network_mode above
+    # and uncomment the lines below to map port 3000.
+    # ports:
+    #   - "3000:3000"
+    environment:
+      - PORT=3000
+      - NITRO_HOST=0.0.0.0
+    restart: unless-stopped
