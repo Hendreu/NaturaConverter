@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Cache the install layer independently of source changes.
 COPY package.json bun.lock ./
-RUN bun install --frozen-lockfile
+RUN bun install
 
 # Source is needed for viteStaticCopy (pulls WASM/JS from node_modules + src/)
 COPY . .
