@@ -5,14 +5,9 @@
 services:
   app:
     build: .
-    # Use host networking on Linux so the container shares the host IP stack.
-    # The startup script prints all accessible IPs to the logs.
-    network_mode: "host"
-    # Alternative (Docker Desktop / non-Linux): comment out network_mode above
-    # and uncomment the lines below to map port 3000.
-    # ports:
-    #   - "3000:3000"
+    ports:
+      - "6742:6742"
     environment:
-      - PORT=3000
+      - PORT=6742
       - NITRO_HOST=0.0.0.0
     restart: unless-stopped
