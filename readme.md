@@ -31,6 +31,29 @@ Use o primeiro IP (rede real do host) para acessar de outras máquinas.
 
 > **Nota:** Se seu usuário estiver no grupo `docker`, omita o `sudo`.
 
+## HTTPS com Let's Encrypt
+
+O `docker-compose.yml` inclui Nginx + Certbot. Para habilitar HTTPS:
+
+1. Aponte o domínio `convert.natura.com` para o IP do servidor.
+2. Gere o certificado:
+
+```bash
+sudo docker compose run --rm certbot certonly \
+  --webroot -w /var/www/certbot \
+  -d convert.natura.com \
+  --agree-tos --no-eff-email \
+  -m hendreutomadoce.act@natura.com
+```
+
+3. Reinicie o Nginx para carregar o certificado:
+
+```bash
+sudo docker compose restart nginx
+```
+
+O container `certbot` renova o certificado automaticamente a cada 12 horas.
+
 ## Desenvolvimento local
 
 Requer [Bun](https://bun.sh) instalado.
