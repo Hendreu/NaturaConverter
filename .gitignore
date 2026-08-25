@@ -20,6 +20,10 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# HTTPS certificates and local env
+/certbot
+.env
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
