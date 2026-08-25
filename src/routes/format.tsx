@@ -151,20 +151,11 @@ function FormatPage() {
   }, []);
 
   const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
+    const q = query.trim().toLowerCase().replace(/^\./, "");
     if (!q) return allFormats;
-    return allFormats.filter((fmt) => {
-      const haystack = [
-        fmt.name,
-        fmt.format,
-        fmt.extension,
-        fmt.mime,
-        categoryLabel(normalizeCategory(fmt.category)),
-      ]
-        .join(" ")
-        .toLowerCase();
-      return haystack.includes(q);
-    });
+    return allFormats.filter((fmt) =>
+      fmt.extension.replace(/^\./, "").toLowerCase().startsWith(q),
+    );
   }, [allFormats, query]);
 
   const popular = useMemo(

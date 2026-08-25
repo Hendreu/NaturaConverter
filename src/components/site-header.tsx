@@ -6,8 +6,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center">
-          <img src={naturaLogo} alt="Natura" className="h-8 w-auto" />
+        <Link to="/" className="flex items-center gap-3">
+          <img src={naturaLogo} alt="Natura" className="h-10 w-auto" />
+          <span className="font-display text-xl font-semibold tracking-tight text-foreground">
+            Natura Convert
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">

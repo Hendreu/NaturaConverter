@@ -42,24 +42,35 @@ class TypstHandler implements FormatHandler {
 
     const outputFiles: FileData[] = [];
 
-    for (const file of inputFiles) {
-      const mainContent = new TextDecoder().decode(file.bytes);
-      const baseName = file.name.replace(/\.[^.]+$/u, "");
+    // When preceded by a handler that extracted embedded assets (e.g. DOCX→TYPST),
+    // inputFiles contains the main .typ plus companion files. Compile one document
+    // and mapShadow the assets so Typst can resolve #image(...) references.
+    const mainIndex = inputFiles.findIndex((f) => f.name.endsWith(".typ"));
+    const mainFile = mainIndex >= 0 ? inputFiles[mainIndex] : inputFiles[0];
+    const mainPath = `/${mainFile.name}`;
+    const mainContent = new TextDecoder().decode(mainFile.bytes);
+    const baseName = mainFile.name.replace(/\.[^.]+$/u, "");
 
-      if (outputFormat.internal === "pdf") {
-        const pdfData = await this.$typst.pdf({ mainContent });
-        if (!pdfData) throw new Error("Typst compilation to PDF failed.");
-        outputFiles.push({
-          name: `${baseName}.pdf`,
-          bytes: new Uint8Array(pdfData),
-        });
-      } else if (outputFormat.internal === "svg") {
-        const svgString = await this.$typst.svg({ mainContent });
-        outputFiles.push({
-          name: `${baseName}.svg`,
-          bytes: new TextEncoder().encode(svgString),
-        });
-      }
+    await this.$typst.addSource(mainPath, mainContent);
+
+    for (const file of inputFiles) {
+      if (file === mainFile) continue;
+      await this.$typst.mapShadow(`/${file.name}`, file.bytes);
+    }
+
+    if (outputFormat.internal === "pdf") {
+      const pdfData = await this.$typst.pdf({ mainFilePath: mainPath });
+      if (!pdfData) throw new Error("Typst compilation to PDF failed.");
+      outputFiles.push({
+        name: `${baseName}.pdf`,
+        bytes: new Uint8Array(pdfData),
+      });
+    } else if (outputFormat.internal === "svg") {
+      const svgString = await this.$typst.svg({ mainFilePath: mainPath });
+      outputFiles.push({
+        name: `${baseName}.svg`,
+        bytes: new TextEncoder().encode(svgString),
+      });
     }
 
     return outputFiles;

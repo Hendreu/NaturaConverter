@@ -26,14 +26,18 @@ function Home() {
         );
       }
       setFile(file);
+      let detected = null;
       try {
         await initEngine();
-        const detected = detectFormat(file);
+        detected = detectFormat(file);
         setDetectedFormat(detected);
       } catch (err) {
         console.warn("Engine init/detect failed:", err);
       }
-      navigate({ to: "/edit" });
+      const isPdf =
+        file.type === "application/pdf" ||
+        detected?.format.format.toLowerCase() === "pdf";
+      navigate({ to: isPdf ? "/edit" : "/format" });
     },
     [navigate],
   );

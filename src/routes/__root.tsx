@@ -86,7 +86,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Converta arquivos entre centenas de formatos direto no navegador. Rápido, gratuito e privado — sem cadastro.",
       },
-      { name: "author", content: "Natura &Co" },
+      { name: "author", content: "Natura" },
       { property: "og:title", content: "Natura Convert — Conversor Universal" },
       {
         property: "og:description",

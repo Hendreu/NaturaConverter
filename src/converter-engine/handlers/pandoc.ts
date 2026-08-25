@@ -2,6 +2,7 @@ import type { FileData, FileFormat, FormatHandler } from "../FormatHandler.ts";
 import CommonFormats from "@/converter-engine/CommonFormats.ts";
 import mime from "mime";
 import normalizeMimeType from "../normalizeMimeType.ts";
+import JSZip from "jszip";
 import { BadMagicError, EOFError, InitializationError } from "@/converter-engine/errors.ts";
 
 class pandocHandler implements FormatHandler {
@@ -275,15 +276,53 @@ class pandocHandler implements FormatHandler {
       const outputBlob = files.output;
       if (!(outputBlob instanceof Blob)) continue;
 
-      const arrayBuffer = await outputBlob.arrayBuffer();
-      const bytes = new Uint8Array(arrayBuffer);
-      const name = inputFile.name.split(".").slice(0, -1).join(".") + "." + outputFormat.extension;
+      let bytes = new Uint8Array(await outputBlob.arrayBuffer());
+      let name = inputFile.name.split(".").slice(0, -1).join(".") + "." + outputFormat.extension;
 
-      outputFiles.push({ bytes, name });
+      // DOCX/ODT embed images inside their ZIP package. When Pandoc writes TYPST
+      // it references those images, but the WASM filesystem does not surface them.
+      // Extract them here so the next handler can map them as assets.
+      const needsMediaExtraction =
+        outputFormat.internal === "typst"
+        && ["docx", "odt"].includes(inputFormat.internal);
+      const embeddedMedia = needsMediaExtraction
+        ? await this.extractMediaFromOfficeZip(inputFile.bytes, inputFormat.internal, "media")
+        : [];
+
+      if (embeddedMedia.length > 0) {
+        let typstSource = new TextDecoder().decode(bytes);
+        typstSource = typstSource.replace(/word\/media\//g, "media/");
+        typstSource = typstSource.replace(/Pictures\//g, "media/");
+        bytes = new TextEncoder().encode(typstSource);
+        outputFiles.push({ bytes, name }, ...embeddedMedia);
+      } else {
+        outputFiles.push({ bytes, name });
+      }
 
     }
 
     return outputFiles;
+  }
+
+  private async extractMediaFromOfficeZip(
+    archiveBytes: Uint8Array,
+    format: string,
+    targetPrefix: string,
+  ): Promise<FileData[]> {
+    const zip = await JSZip.loadAsync(archiveBytes);
+    const sourceFolder = format === "docx" ? "word/media" : "Pictures";
+    const mediaFolder = zip.folder(sourceFolder);
+    if (!mediaFolder) return [];
+
+    const prefixPattern = new RegExp(`^${sourceFolder.replace("/", "\\/")}/`);
+    const mediaFiles: FileData[] = [];
+    for (const [path, entry] of Object.entries(mediaFolder.files)) {
+      if (entry.dir) continue;
+      const fileName = path.replace(prefixPattern, "");
+      const bytes = await entry.async("uint8array");
+      mediaFiles.push({ name: `${targetPrefix}/${fileName}`, bytes });
+    }
+    return mediaFiles;
   }
 
 }
