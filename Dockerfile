@@ -11,8 +11,10 @@ RUN bun install
 # Source is needed for viteStaticCopy (pulls WASM/JS from node_modules + src/)
 COPY . .
 
-# Emits .output/server/index.mjs + .output/public/** (node-server preset)
-RUN bun run build
+# Emits .output/server/index.mjs + .output/public/** (node-server preset).
+# BUILD_VERSION busts the Docker layer cache when you need a guaranteed clean rebuild.
+ARG BUILD_VERSION
+RUN echo "BUILD_VERSION=${BUILD_VERSION}" && bun run build
 
 # ---- prod: run the Nitro node-server bundle on Node 22 ----
 FROM node:22-alpine AS prod

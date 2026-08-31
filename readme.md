@@ -21,6 +21,18 @@ A saída mostra os endereços acessíveis, por exemplo:
 
 Use o primeiro IP (rede real do host) para acessar de outras máquinas.
 
+### Atualizando para uma nova versão
+
+Se o navegador continuar mostrando a versão antiga após o deploy, faça um build limpo invalidando o cache de camadas do Docker:
+
+```bash
+# Dentro do diretório do projeto, com o código novo já no servidor (git pull, rsync, etc.)
+sudo docker compose down
+BUILD_VERSION=$(git rev-parse HEAD) sudo docker compose up -d --build
+```
+
+O `BUILD_VERSION` força o Docker a reconstruir a camada de build mesmo que nenhuma dependência tenha mudado. O `nginx.conf` também foi ajustado para que o HTML e as rotas SSR nunca sejam cacheados, enquanto assets com hash ficam em cache por um ano.
+
 ### Comandos úteis
 
 | Ação | Comando |
@@ -28,6 +40,7 @@ Use o primeiro IP (rede real do host) para acessar de outras máquinas.
 | Ver logs em tempo real | `sudo docker compose logs -f app` |
 | Parar o servidor | `sudo docker compose down` |
 | Subir sem rebuild | `sudo docker compose up -d` |
+| Forçar rebuild limpo | `BUILD_VERSION=$(git rev-parse HEAD) sudo docker compose up -d --build` |
 
 > **Nota:** Se seu usuário estiver no grupo `docker`, omita o `sudo`.
 
