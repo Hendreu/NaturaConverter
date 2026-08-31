@@ -16,6 +16,10 @@ COPY . .
 ARG BUILD_VERSION
 RUN echo "BUILD_VERSION=${BUILD_VERSION}" && bun run build
 
+# pdf2docx-wasm needs its Pyodide runtime + wheels served at /wasm/pdf2docx/.
+# The Vite plugin misses these in production builds, so copy them explicitly.
+RUN mkdir -p .output/public/wasm/pdf2docx && cp -r node_modules/pdf2docx-wasm/* .output/public/wasm/pdf2docx/
+
 # ---- prod: run the Nitro node-server bundle on Node 22 ----
 FROM node:22-alpine AS prod
 WORKDIR /app
