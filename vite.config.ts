@@ -82,6 +82,10 @@ export default defineConfig({
             src: "node_modules/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm",
             dest: "wasm",
           },
+          {
+            src: "node_modules/pdf2docx-wasm/*",
+            dest: "wasm/pdf2docx",
+          },
         ],
       }),
     ],
@@ -93,6 +97,7 @@ export default defineConfig({
         "@sqlite.org/sqlite-wasm",
         "@bokuweb/zstd-wasm",
         "@yowasp/clang",
+        "pdf2docx-wasm",
       ],
     },
 

@@ -77,6 +77,7 @@ import wasiRunnerHandler from "./wasiRunner.ts";
 import clangWasiHandler from "./clang-wasi.ts";
 import mcModpackHandler from "./mcModpack.ts";
 import azw3Handler from "./azw3.ts";
+import pdf2docxHandler from "./pdf2docx.ts";
 
 export function registerHandlers(handlers: FormatHandler[]) {
   try { handlers.push(new svgTraceHandler()) } catch (_) { }
@@ -162,4 +163,5 @@ export function registerHandlers(handlers: FormatHandler[]) {
   try { handlers.push(new clangWasiHandler()) } catch (_) { }
   try { handlers.push(new mcModpackHandler()) } catch (_) { }
   try { handlers.push(new azw3Handler()) } catch (_) { }
+  try { handlers.push(new pdf2docxHandler()) } catch (_) { }
 }

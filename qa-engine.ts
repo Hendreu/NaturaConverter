@@ -1,5 +1,7 @@
 // ponytail: Node-level engine QA — proves registration + conversion without a browser.
 // Run: bun.cmd run qa-engine.ts   (from repo root)
+import type { FileFormat } from "./src/converter-engine/FormatHandler.ts";
+
 (globalThis as any).window = globalThis;
 (globalThis as any).requestAnimationFrame = (cb: (t: number) => void) => setTimeout(() => cb(Date.now()), 0);
 (globalThis as any).self = globalThis;
@@ -32,7 +34,19 @@ const handlers: any[] = [];
 registerHandlers(handlers);
 check("A1 registry loads", handlers.length > 0, `${handlers.length} handlers registered`);
 const names = handlers.map((h) => h.name);
-for (const expected of ["qoi-fu", "svgTrace", "toon", "TextEncoding", "typst", "sqlite3", "FFmpeg", "ImageMagick", "pandoc", "sevenZip"]) {
+for (const expected of [
+  "qoi-fu",
+  "svgTrace",
+  "toon",
+  "TextEncoding",
+  "typst",
+  "sqlite3",
+  "FFmpeg",
+  "ImageMagick",
+  "pandoc",
+  "sevenZip",
+  "pdf2docx",
+]) {
   check(`A2 handler present: ${expected}`, names.includes(expected));
 }
 
@@ -98,6 +112,18 @@ if (detectedJson) {
       check("E2 JSON->BSON converts", false, String(e).slice(0, 120));
     }
   }
+}
+
+// F) pdf2docx-wasm handler (PDF→DOCX)
+// ponytail: registration + format check only — actual WASM conversion is browser-only (pyodide)
+const pdf2docxHandler = handlers.find((h) => h.name === "pdf2docx");
+check("F1 pdf2docx registered", pdf2docxHandler !== undefined);
+if (pdf2docxHandler) {
+  const formats: FileFormat[] = pdf2docxHandler.supportedFormats ?? [];
+  const pdfFrom = formats.find((format) => format.format === "pdf" && format.from);
+  const docxTo = formats.find((format) => format.format === "docx" && format.to);
+  check("F2 pdf2docx has PDF input", pdfFrom !== undefined);
+  check("F3 pdf2docx has DOCX output", docxTo !== undefined);
 }
 
 console.log("\n===== QA RESULTS =====");
