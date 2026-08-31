@@ -9,7 +9,7 @@ export function SiteHeader() {
         <Link to="/" className="flex items-center gap-3">
           <img src={naturaLogo} alt="Natura" className="h-10 w-auto" />
           <span className="font-display text-xl font-semibold tracking-tight text-foreground">
-            Natura Convert
+            Natura
           </span>
         </Link>
 
