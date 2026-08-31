@@ -6,6 +6,21 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { viteStaticCopy } from "vite-plugin-static-copy";
+import fs from "node:fs";
+import path from "node:path";
+
+function copyPdf2DocxWasm() {
+  return {
+    name: "copy-pdf2docx-wasm",
+    apply: "build" as const,
+    writeBundle() {
+      const src = path.resolve("node_modules/pdf2docx-wasm");
+      const dest = path.resolve(".output/public/wasm/pdf2docx");
+      fs.mkdirSync(dest, { recursive: true });
+      fs.cpSync(src, dest, { recursive: true, force: true, dereference: true });
+    },
+  };
+}
 
 export default defineConfig({
   tanstackStart: {
@@ -14,10 +29,10 @@ export default defineConfig({
     server: { entry: "server" },
   },
   nitro: { preset: "node-server" },
-  vite: {
-    plugins: [
-      viteStaticCopy({
-        targets: [
+  // ponytail: viteStaticCopy must run before TanStack/Nitro internal plugins, so place it at the top level.
+  plugins: [
+    viteStaticCopy({
+      targets: [
           {
             src: "node_modules/@ffmpeg/core/dist/esm/ffmpeg-core.*",
             dest: "wasm",
@@ -82,13 +97,12 @@ export default defineConfig({
             src: "node_modules/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm",
             dest: "wasm",
           },
-          {
-            src: "node_modules/pdf2docx-wasm/*",
-            dest: "wasm/pdf2docx",
-          },
+
         ],
       }),
+      copyPdf2DocxWasm(),
     ],
+  vite: {
     optimizeDeps: {
       exclude: [
         "@ffmpeg/ffmpeg",
@@ -100,7 +114,6 @@ export default defineConfig({
         "pdf2docx-wasm",
       ],
     },
-
     build: {
       commonjsOptions: {
         ignore: ["canvas"],
