@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        - BUILD_VERSION=${BUILD_VERSION:-}
+    ports:
+      - "8080:6742"
+    environment:
+      - PORT=6742
+      - NITRO_HOST=0.0.0.0
+    restart: unless-stopped
