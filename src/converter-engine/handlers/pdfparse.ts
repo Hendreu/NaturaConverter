@@ -27,7 +27,7 @@ class pdfparseHandler implements FormatHandler {
     const outputFiles: FileData[] = [];
 
     for (const inputFile of inputFiles) {
-      const parser = new PDFParse({ data: inputFile.bytes });
+      const parser = new PDFParse({ data: new Uint8Array(inputFile.bytes) });
       const text = await parser.getText();
       await parser.destroy();
 
