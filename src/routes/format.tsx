@@ -287,8 +287,8 @@ function FormatPage() {
 
         {discoveryStatus}
 
-        <div className="mt-8 max-w-xl">
-          <div className="relative">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="relative w-full min-w-0 max-w-xl sm:flex-1">
             <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
             <Input
               placeholder="Pesquisar conversão (ex: pdf, jpg, docx...)"
@@ -297,6 +297,14 @@ function FormatPage() {
               className="rounded-full border-border bg-card pl-10 py-3 text-sm shadow-sm focus-visible:ring-primary"
             />
           </div>
+          <Button
+            size="lg"
+            className="w-full shrink-0 rounded-full px-8 shadow-lg shadow-primary/20 transition-transform hover:scale-[1.02] sm:w-auto"
+            disabled={!selected}
+            onClick={handleConvert}
+          >
+            Converter agora <ArrowRight className="size-4" />
+          </Button>
         </div>
 
         {query.trim() === "" && popular.length > 0 && (
