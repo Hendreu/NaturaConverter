@@ -5,6 +5,8 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Card } from "@/components/ui/card";
 import { setFile, setDetectedFormat } from "@/stores/file-store";
 import { initEngine, detectFormat } from "@/converter-engine/engine";
+import { isPdfFile, prepareUpload } from "@/lib/file-upload";
+import { toast } from "sonner";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -13,31 +15,40 @@ export const Route = createFileRoute("/")({
 function Home() {
   const navigate = useNavigate();
   const inputRef = useRef<HTMLInputElement>(null);
+  const processingRef = useRef(false);
   const [dragging, setDragging] = useState(false);
   const [processing, setProcessing] = useState(false);
 
-  const handleFile = useCallback(
-    async (file: File) => {
+  const handleFiles = useCallback(
+    async (files: File[]) => {
+      if (processingRef.current || files.length === 0) return;
+      processingRef.current = true;
       setProcessing(true);
-      if (typeof window !== "undefined") {
+      try {
+        const file = await prepareUpload(files);
         sessionStorage.setItem(
           "natura-convert:file",
           JSON.stringify({ name: file.name, size: file.size, type: file.type }),
         );
-      }
-      setFile(file);
-      let detected = null;
-      try {
-        await initEngine();
-        detected = detectFormat(file);
-        setDetectedFormat(detected);
+        setFile(file);
+        let detected = null;
+        if (!isPdfFile(file)) {
+          try {
+            await initEngine();
+            detected = detectFormat(file);
+            setDetectedFormat(detected);
+          } catch (err) {
+            console.warn("Engine init/detect failed:", err);
+          }
+        }
+        const isPdf = isPdfFile(file) || detected?.format.format.toLowerCase() === "pdf";
+        await navigate({ to: isPdf ? "/edit" : "/format" });
       } catch (err) {
-        console.warn("Engine init/detect failed:", err);
+        toast.error(err instanceof Error ? err.message : "Não foi possível abrir os arquivos.");
+      } finally {
+        processingRef.current = false;
+        setProcessing(false);
       }
-      const isPdf =
-        file.type === "application/pdf" ||
-        detected?.format.format.toLowerCase() === "pdf";
-      navigate({ to: isPdf ? "/edit" : "/format" });
     },
     [navigate],
   );
@@ -45,8 +56,7 @@ function Home() {
   const onDrop = (e: React.DragEvent) => {
     e.preventDefault();
     setDragging(false);
-    const file = e.dataTransfer.files?.[0];
-    if (file) handleFile(file);
+    handleFiles(Array.from(e.dataTransfer.files));
   };
 
   if (processing) {
@@ -118,10 +128,12 @@ function Home() {
             <input
               ref={inputRef}
               type="file"
+              multiple
               className="sr-only"
               onChange={(e) => {
-                const f = e.target.files?.[0];
-                if (f) handleFile(f);
+                const files = Array.from(e.target.files ?? []);
+                e.target.value = "";
+                handleFiles(files);
               }}
             />
             <span className="grid size-20 place-items-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/25 transition-transform group-hover:scale-105">
@@ -131,6 +143,9 @@ function Home() {
               Arraste um arquivo aqui
             </p>
             <p className="mt-1.5 text-sm text-muted-foreground">ou clique para selecionar</p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Selecione vários PDFs para combinar e editar suas páginas.
+            </p>
             <span className="mt-8 inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background">
               Selecionar arquivo
               <ArrowRight className="size-4" />

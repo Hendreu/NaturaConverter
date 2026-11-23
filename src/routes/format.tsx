@@ -6,10 +6,12 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { getDetectedFormat, setOutputFormat } from "@/stores/file-store";
-import { initEngine, getOutputFormats } from "@/converter-engine/engine";
+import { getDetectedFormat, getFile, setDetectedFormat, setOutputFormat } from "@/stores/file-store";
+import { initEngine, detectFormat, getOutputFormats } from "@/converter-engine/engine";
+import CommonFormats from "@/converter-engine/CommonFormats";
 import type { FileFormat } from "@/converter-engine/FormatHandler";
 import { cn } from "@/lib/utils";
+import { isPdfFile } from "@/lib/file-upload";
 
 export const Route = createFileRoute("/format")({
   component: FormatPage,
@@ -58,6 +60,8 @@ const NULL_FORMAT: FileFormat = {
   internal: "",
   lossless: false,
 };
+
+const PDF_OUTPUT = CommonFormats.PDF.supported("pdf", true, true, true);
 
 function normalizeCategory(category: FileFormat["category"]): string {
   if (!category) return "outros";
@@ -131,24 +135,46 @@ function FormatPage() {
   const [detected, setDetected] = useState(false);
   const [selected, setSelected] = useState<FileFormat | null>(null);
   const [query, setQuery] = useState("");
+  const [discoveryError, setDiscoveryError] = useState(false);
+  const [discoveryAttempt, setDiscoveryAttempt] = useState(0);
 
   useEffect(() => {
     let cancelled = false;
-    initEngine().then(() => {
-      if (cancelled) return;
-      const detectedFormat = getDetectedFormat();
-      const inputFormat = detectedFormat?.format ?? NULL_FORMAT;
-      const outputs = getOutputFormats(inputFormat);
-
-      if (cancelled) return;
-      setAllFormats(outputs);
-      setDetected(!!detectedFormat);
-      setLoading(false);
-    });
+    setLoading(true);
+    setDiscoveryError(false);
+    const file = getFile();
+    const pdfInput =
+      getDetectedFormat()?.format.format.toLowerCase() === "pdf" ||
+      !!(file && isPdfFile(file));
+    if (pdfInput) {
+      setAllFormats([PDF_OUTPUT]);
+      setDetected(true);
+    }
+    initEngine()
+      .then(() => {
+        if (cancelled) return;
+        const detectedFormat = getDetectedFormat() ?? (file ? detectFormat(file) : null);
+        setDetectedFormat(detectedFormat);
+        const inputFormat = detectedFormat?.format ?? NULL_FORMAT;
+        const outputs = getOutputFormats(inputFormat);
+        setAllFormats(
+          pdfInput
+            ? [PDF_OUTPUT, ...outputs.filter((format) => format.mime !== "application/pdf")]
+            : outputs,
+        );
+        setDetected(!!detectedFormat || pdfInput);
+      })
+      .catch((error: unknown) => {
+        console.error("Failed to initialize conversion formats:", error);
+        if (!cancelled) setDiscoveryError(true);
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [discoveryAttempt]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase().replace(/^\./, "");
@@ -192,12 +218,27 @@ function FormatPage() {
     { label: "Formato" },
   ];
 
-  if (loading) {
+  const discoveryStatus = loading ? (
+    <p role="status" className="mt-6 text-muted-foreground">
+      Carregando formatos de conversão...
+    </p>
+  ) : discoveryError ? (
+    <div role="alert" className="mt-6 space-y-3">
+      <p className="text-destructive">
+        Não foi possível carregar os formatos de conversão. Tente novamente.
+      </p>
+      <Button variant="outline" onClick={() => setDiscoveryAttempt((attempt) => attempt + 1)}>
+        Tentar novamente
+      </Button>
+    </div>
+  ) : null;
+
+  if (loading && allFormats.length === 0) {
     return (
       <>
         <Breadcrumbs items={breadcrumbs} />
         <section className="mx-auto max-w-6xl px-6 pb-10 pt-8">
-          <p className="text-muted-foreground">Carregando formatos...</p>
+          {discoveryStatus}
         </section>
       </>
     );
@@ -210,8 +251,11 @@ function FormatPage() {
         <section className="mx-auto max-w-6xl px-6 pb-10 pt-8">
           <div className="max-w-md">
             <h1 className="font-display text-3xl font-medium">
-              Nenhum formato de saída disponível para este arquivo.
+              {discoveryError
+                ? "Formatos de conversão indisponíveis."
+                : "Nenhum formato de saída disponível para este arquivo."}
             </h1>
+            {discoveryStatus}
             <Button
               variant="outline"
               className="mt-6 rounded-full"
@@ -240,6 +284,8 @@ function FormatPage() {
               : "Formato não identificado — escolha manualmente"}
           </p>
         </div>
+
+        {discoveryStatus}
 
         <div className="mt-8 max-w-xl">
           <div className="relative">

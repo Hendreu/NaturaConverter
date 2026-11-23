@@ -20,6 +20,7 @@ import {
 } from "@/stores/file-store";
 import { convert, initEngine } from "@/converter-engine/engine";
 import { ConvertPathNode, type FileData } from "@/converter-engine/FormatHandler";
+import { isPdfFile } from "@/lib/file-upload";
 
 export const Route = createFileRoute("/download")({
   component: DownloadPage,
@@ -41,7 +42,7 @@ function DownloadPage() {
     const outputFormat = getOutputFormat();
     const detectedFormat = getDetectedFormat();
 
-    if (!file || !outputFormat || !detectedFormat) {
+    if (!file || !outputFormat) {
       navigate({ to: "/" });
       return;
     }
@@ -50,21 +51,25 @@ function DownloadPage() {
     setErrorMsg("");
 
     try {
-      await initEngine();
-
       const edited = getEditedBytes();
       const bytes = edited ?? new Uint8Array(await file.arrayBuffer());
       const fileData: FileData = { name: file.name, bytes };
 
-      // Same format — skip conversion, download original directly
       if (
-        detectedFormat.format.mime === outputFormat.mime &&
-        detectedFormat.format.extension === outputFormat.extension
+        (isPdfFile(file) && outputFormat.mime === "application/pdf") ||
+        (detectedFormat?.format.mime === outputFormat.mime &&
+          detectedFormat.format.extension === outputFormat.extension)
       ) {
         setOutputFiles([fileData]);
         setStatus("success");
         return;
       }
+
+      if (!detectedFormat) {
+        navigate({ to: "/" });
+        return;
+      }
+      await initEngine();
 
       const fromNode = new ConvertPathNode(
         detectedFormat.handler,
