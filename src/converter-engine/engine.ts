@@ -7,11 +7,20 @@ let formatCache: Map<string, FileFormat[]> | null = null;
 let graph: TraversionGraph | null = null;
 let allOptions: Array<{ format: FileFormat; handler: FormatHandler }> = [];
 let initialized = false;
+let initialization: Promise<void> | null = null;
 
-export async function initEngine() {
-  if (initialized) return;
-  if (typeof window === "undefined") return;
+export function initEngine(): Promise<void> {
+  if (initialized || typeof window === "undefined") return Promise.resolve();
+  if (!initialization) {
+    initialization = initializeEngine().catch((error: unknown) => {
+      initialization = null;
+      throw error;
+    });
+  }
+  return initialization;
+}
 
+async function initializeEngine() {
   const { registerHandlers } = await import("@/converter-engine/handlers");
   const handlers: FormatHandler[] = [];
   registerHandlers(handlers);
